@@ -9,13 +9,92 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Project.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Project" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="625,250" size="100,100">
-(Temp)
-Welcome! This is the intro to the game!
+<tw-storydata name="Project" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+  /* Uncomment the following on production */
+  /* display: none; */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="S1 Intro" tags="" position="800,225" size="100,100">
+(set: $s1_questions_left to 2)\
+(set: $s1FaceComp to (dm: &quot;name&quot;, &quot;Facemap&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Desc&quot;))\
+(set: $s1FaceCompRep to (dm: &quot;name&quot;, &quot;S1CompanyRep&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Rep Desc&quot;))\
+(set: $s1VendComp to (dm: &quot;name&quot;, &quot;S1VendComp&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Desc&quot;))\
+### First Job
+
+Your manager, ($properNameLink: $manager), assigns you to a project with ($properNameLink: $s1FaceComp).  ($properNameLink: $s1FaceComp) is a well-funded startup that focuses on facial recognition technology. They have spent a few years developing their technology and now they have a software that can identify a person based on an image of their face. They want you to advise them on what products this technology can be used for, so that they can enter the market.
+
+[[Proceed with this project-&gt;S1 Explanation]]
+[[Refuse to take on this project because you think that all facial recognition technology is dangerous and unethical-&gt;S1 Quit]]
+</tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="475,225" size="100,100">
+(set: $properNameInfo to (dm: &quot;name&quot;, str, &quot;style&quot;,changer, &quot;desc_link&quot;,str))\
+(set: $properName to (macro: $properNameInfo-type _data, [
+	This macro displays properNameInfo.
+    It is stylized according to the style of the proper name.
+	(set: _name to _data&#39;s name)
+    (set: _style to _data&#39;s style)
+	(output:) [_style[_name]]
+]))\
+(set: $properNameLink to (macro: $properNameInfo-type _data, [
+	This macro displays a properNameInfo as a link. 
+    Clicking on it links to the description of the thing.
+    It is stylized according to the style of the proper name.
+	(output:) [(link-style: _data&#39;s style)[(link-goto:_data&#39;s name, _data&#39;s desc_link)]]
+]))\
+(set: $manager to (dm: &quot;name&quot;, &quot;Manfred Neiger&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))\
+(set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))\
+### Introduction
+(Temp) Welcome! This is the intro to the game!
 
 Add text here to describe what we are doing a bit more.
 
 Here are a few more.
+
+[[Let&#39;s Begin!-&gt;S1 Intro]]
+</tw-passagedata><tw-passagedata pid="3" name="Manager Desc" tags="" position="350,350" size="100,100">
+### Manager (print: $manager&#39;s name)
+
+(Temp) Description about ($properName: $manager).
+
+(link-undo:&quot;Return&quot;, &quot;Can&#39;t Return&quot;)
+</tw-passagedata><tw-passagedata pid="4" name="S1 Face Comp Desc" tags="" position="650,350" size="100,100">
+### (print: $s1FaceComp&#39;s name)
+
+(Temp) Description about ($properName: $s1FaceComp).
+
+(link-undo:&quot;Return&quot;, &quot;Can&#39;t Return&quot;)
+</tw-passagedata><tw-passagedata pid="5" name="S1 Quit" tags="" position="800,50" size="100,100">
+### Refuse Job
+
+You refuse to take on the project with ($properNameLink: $s1FaceComp) because you think that all facial recognition technology is dangerous and unethical. As you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
+
+### GAME OVER
+</tw-passagedata><tw-passagedata pid="6" name="S1 Explanation" tags="" position="800,400" size="100,100">
+### Job Accepted
+
+You meet with ($properNameLink: $s1FaceCompRep), a representative from ($properNameLink: $s1FaceComp), to find out more details about your assignment. 
+
+They tell you the following:
+
+“($properNameLink: $s1FaceComp) started with the goal of developing some of the most accurate facial recognition technology in the world, that can identify a person based on even a low-resolution image of their face. This goal is ongoing, but we have been facing pressure from investors to put a product into the market.
+
+&quot;Our current technology isn’t accurate enough for our standards to be used to uniquely identify people, so we don’t want to market it as that. Since it is over 99% accurate for matching basic demographic information like age and gender, we think it could be useful for marketing applications.
+
+&quot;($properNameLink: $s1VendComp) has expressed interest in installing our software on their vending machines to target certain products to certain people in range of a vending machine. We would like you to discuss with stakeholders to determine if this is a good idea.”</tw-passagedata><tw-passagedata pid="7" name="Consulting Company Desc" tags="" position="350,475" size="100,100">
+### (print: $consultingCompany&#39;s name)
+
+(Temp) Description about ($properName: $consultingCompany).
+
+(link-undo:&quot;Return&quot;, &quot;Can&#39;t Return&quot;)
+</tw-passagedata><tw-passagedata pid="8" name="S1 Face Comp Rep Desc" tags="" position="650,475" size="100,100">
+### (print: $s1FaceCompRep&#39;s name)
+
+(Temp) Description about ($properName: $s1FaceCompRep).
+
+(link-undo:&quot;Return&quot;, &quot;Can&#39;t Return&quot;)
+</tw-passagedata><tw-passagedata pid="9" name="S1 Vend Comp Desc" tags="" position="650,600" size="100,100">
+### (print: $s1VendComp&#39;s name)
+
+(Temp) Description about ($properName: $s1VendComp).
+
+(link-undo:&quot;Return&quot;, &quot;Can&#39;t Return&quot;)
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
