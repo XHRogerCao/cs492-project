@@ -81,11 +81,12 @@ They tell you the following:
 (Temp) Description about ($properName: $s1VendComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1850,200" size="100,100">There are a few people that you can consult.
+</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1825,200" size="100,100">There are a few people that you can consult.
 * ($properNameLink: $s1FaceCompTech), a machine learning developer at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTech&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to him-&gt;S1 Face Comp Tech Convo]]]
 * ($properNameLink: $s1FaceCompTechManager), the technology manager at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTechManager&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Manager Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to her-&gt;S1 Face Comp Tech Manager Convo]]]
 * ($properNameLink: $s1VendCompMarketJr), a junior member of the marketing team at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketJr&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Jr Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Jr Convo]]]
 * ($properNameLink: $s1VendCompMarketExec), the marketing executive at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketExec&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Exec Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Exec Convo]]]
+* ($properNameLink: $s1VendCompStan), a big fan of ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompStan&quot;)[[[Review your conversation-&gt;S1 Vend Comp Stan Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Stan Convo]]]
 </tw-passagedata><tw-passagedata pid="11" name="S1 Face Comp Tech Desc" tags="" position="1450,450" size="100,100">
 ### (print: $s1FaceCompTech&#39;s name)
 
@@ -142,6 +143,7 @@ They tell you the following:
 (set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Tech Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;TM&quot;))
 (set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Market Exec&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;ME&quot;))
 (set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Market Junior&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;MJ&quot;))
+(set: $s1VendCompStan to (dm: &quot;name&quot;, &quot;Stan&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Stan Desc&quot;, &quot;short&quot;, &quot;Stan&quot;))
 }</tw-passagedata><tw-passagedata pid="17" name="S1 Face Comp Tech Manager Desc" tags="" position="1600,450" size="100,100">
 ### (print: $s1FaceCompTechManager&#39;s name)
 
@@ -187,6 +189,19 @@ They tell you the following:
 
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1VendCompMarketJr&quot;))
+</tw-passagedata><tw-passagedata pid="23" name="S1 Vend Comp Stan Desc" tags="" position="2050,450" size="100,100">
+### (print: $s1VendCompStan&#39;s name)
+
+($properName: $s1VendCompStan) is a big fan of ($properNameLink: $s1VendComp). He stays up to date with every new vending machine installation in the country, and his goal is to try every candy product that ($properNameLink: $s1VendComp) sells.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="24" name="S1 Vend Comp Stan Convo" tags="" position="2050,325" size="100,100">
+### Talk to ($properNameLinkCustom: $s1VendCompStan, &quot;short&quot;)
+
+“I love ($properNameLink: $s1VendComp)! It would be very cool if the vending machines could recommend new candy to me based on what I’ve bought in the past. That would be a helpful feature to me and it would probably encourage me to buy more candy, too.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s1_people_consulted to it + (dataset: &quot;s1VendCompStan&quot;))
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
