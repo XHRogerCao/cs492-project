@@ -81,7 +81,10 @@ They tell you the following:
 (Temp) Description about ($properName: $s1VendComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1825,200" size="100,100">There are a few people that you can consult.
+</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1825,200" size="100,100">There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
+
+You may review the conversation with a person after consulting with them.
+
 * ($properNameLink: $s1FaceCompTech), a machine learning developer at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTech&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to him-&gt;S1 Face Comp Tech Convo]]]
 * ($properNameLink: $s1FaceCompTechManager), the technology manager at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTechManager&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Manager Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to her-&gt;S1 Face Comp Tech Manager Convo]]]
 * ($properNameLink: $s1VendCompMarketJr), a junior member of the marketing team at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketJr&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Jr Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Jr Convo]]]
