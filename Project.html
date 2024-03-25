@@ -90,6 +90,7 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s1VendCompMarketJr), a junior member of the marketing team at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketJr&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Jr Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Jr Convo]]]
 * ($properNameLink: $s1VendCompMarketExec), the marketing executive at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketExec&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Exec Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Exec Convo]]]
 * ($properNameLink: $s1VendCompStan), a big fan of ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompStan&quot;)[[[Review your conversation-&gt;S1 Vend Comp Stan Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Stan Convo]]]
+* ($properNameLink: $s1Student), a student at ($properNameLink: $s1University). (if: $s1_people_consulted contains &quot;s1Student&quot;)[[[Review your conversation-&gt;S1 Student Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Student Convo]]]
 </tw-passagedata><tw-passagedata pid="11" name="S1 Face Comp Tech Desc" tags="" position="1450,450" size="100,100">
 ### (print: $s1FaceCompTech&#39;s name)
 
@@ -140,6 +141,7 @@ You may review the conversation with a person after consulting with them.
 (set: $s1FaceComp to (dm: &quot;name&quot;, &quot;Facemap&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Desc&quot;))
 (set: $s1FaceCompRep to (dm: &quot;name&quot;, &quot;S1CompanyRep&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Rep Desc&quot;))
 (set: $s1VendComp to (dm: &quot;name&quot;, &quot;S1VendComp&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Desc&quot;))
+(set: $s1University to (dm: &quot;name&quot;, &quot;University of Fireloo&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 University Desc&quot;))
 
 &lt;!-- Names of people to talk to --&gt;
 (set: $s1FaceCompTech to (dm: &quot;name&quot;, &quot;Gerald Princeton&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Desc&quot;, &quot;short&quot;, &quot;Gerald&quot;))
@@ -147,6 +149,7 @@ You may review the conversation with a person after consulting with them.
 (set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Market Exec&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;ME&quot;))
 (set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Market Junior&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;MJ&quot;))
 (set: $s1VendCompStan to (dm: &quot;name&quot;, &quot;Stan&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Stan Desc&quot;, &quot;short&quot;, &quot;Stan&quot;))
+(set: $s1Student to (dm: &quot;name&quot;, &quot;Ocean&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Student Desc&quot;, &quot;short&quot;, &quot;Ocean&quot;))
 }</tw-passagedata><tw-passagedata pid="17" name="S1 Face Comp Tech Manager Desc" tags="" position="1600,450" size="100,100">
 ### (print: $s1FaceCompTechManager&#39;s name)
 
@@ -205,6 +208,27 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1VendCompStan&quot;))
+</tw-passagedata><tw-passagedata pid="25" name="S1 Student Desc" tags="" position="2200,450" size="100,100">
+### (print: $s1Student&#39;s name)
+
+($properName: $s1Student) is a student at ($properName: $s1University), which has ($properNameLink: $s1VendComp)&#39;s vending machines installed.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="26" name="S1 University Desc" tags="" position="900,700" size="100,100">
+### (print: $s1University&#39;s name)
+
+(Temp) Description about ($properName: $s1University).
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="27" name="S1 Student Convo" tags="" position="2200,325" size="100,100">
+### Talk to ($properNameLinkCustom: $s1Student, &quot;short&quot;)
+
+“I think most students here have bought candy from the vending machines at least once. I don’t buy candy often, but I definitely have friends who do. Most students are very privacy-oriented, though, so I don’t think they would like it if the vending machines had facial recognition technology.
+
+&quot;Personally, I wouldn’t buy candy from vending machines that used facial recognition technology. I’d rather buy snacks from the campus convenience store instead.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s1_people_consulted to it + (dataset: &quot;s1Student&quot;))
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
