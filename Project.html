@@ -81,10 +81,11 @@ They tell you the following:
 (Temp) Description about ($properName: $s1VendComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1700,200" size="100,100">There are a few people that you can consult.
+</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1850,200" size="100,100">There are a few people that you can consult.
 * ($properNameLink: $s1FaceCompTech), a machine learning developer at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTech&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to him-&gt;S1 Face Comp Tech Convo]]]
 * ($properNameLink: $s1FaceCompTechManager), the technology manager at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTechManager&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Manager Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to her-&gt;S1 Face Comp Tech Manager Convo]]]
-* ($properNameLink: $s1VendCompMarketExec), the marketing executive at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketExec&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Exec Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to her-&gt;S1 Vend Comp Market Exec Convo]]]
+* ($properNameLink: $s1VendCompMarketJr), a junior member of the marketing team at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketJr&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Jr Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Jr Convo]]]
+* ($properNameLink: $s1VendCompMarketExec), the marketing executive at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketExec&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Exec Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Exec Convo]]]
 </tw-passagedata><tw-passagedata pid="11" name="S1 Face Comp Tech Desc" tags="" position="1450,450" size="100,100">
 ### (print: $s1FaceCompTech&#39;s name)
 
@@ -140,6 +141,7 @@ They tell you the following:
 (set: $s1FaceCompTech to (dm: &quot;name&quot;, &quot;Gerald Princeton&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Desc&quot;, &quot;short&quot;, &quot;Gerald&quot;))
 (set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Tech Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;TM&quot;))
 (set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Market Exec&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;ME&quot;))
+(set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Market Junior&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;MJ&quot;))
 }</tw-passagedata><tw-passagedata pid="17" name="S1 Face Comp Tech Manager Desc" tags="" position="1600,450" size="100,100">
 ### (print: $s1FaceCompTechManager&#39;s name)
 
@@ -172,6 +174,19 @@ They tell you the following:
 
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1VendCompMarketExec&quot;))
+</tw-passagedata><tw-passagedata pid="21" name="S1 Vend Comp Market Jr Desc" tags="" position="1900,450" size="100,100">
+### (print: $s1VendCompMarketJr&#39;s name)
+
+($properName: $s1VendCompMarketJr) is a junior member of the marketing team at ($properNameLink: $s1VendComp). They recently completed a graduate degree studying the use of technology in marketing.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="22" name="S1 Vend Comp Market Jr Convo" tags="" position="1900,325" size="100,100">
+### Talk to ($properNameLinkCustom: $s1VendCompMarketJr, &quot;short&quot;)
+
+“On the surface, it looks like using demographic information would help us sell more candy. But in a lot of countries and regions, using facial recognition technology in marketing applications is legally grey if not outright illegal. Even if it was legal, many customers would feel uncomfortable with facial recognition technology being in our vending machines, which might be enough to deter them from buying from them. Personally, I wouldn’t use a vending machine that had facial recognition technology built in.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s1_people_consulted to it + (dataset: &quot;s1VendCompMarketJr&quot;))
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
