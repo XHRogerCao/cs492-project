@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Project.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Project" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="Project" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
   /* Uncomment the following on production */
   /* display: none; */
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="S1 Intro" tags="" position="1100,200" size="100,100">
@@ -63,7 +63,7 @@ They tell you the following:
 
 &quot;($properNameLink: $s1VendComp) has expressed interest in installing our software on their vending machines to target certain products to certain people in range of a vending machine. We would like you to discuss with stakeholders to determine if this is a good idea.”
 
-(display: &quot;S1 Hub&quot;)</tw-passagedata><tw-passagedata pid="7" name="Consulting Company Desc" tags="" position="500,450" size="100,100">
+[[Talk to the stakeholders-&gt;S1 Hub]]</tw-passagedata><tw-passagedata pid="7" name="Consulting Company Desc" tags="" position="500,450" size="100,100">
 ### (print: $consultingCompany&#39;s name)
 
 (Temp) Description about ($properName: $consultingCompany).
@@ -81,7 +81,11 @@ They tell you the following:
 (Temp) Description about ($properName: $s1VendComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1825,200" size="100,100">There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
+</tw-passagedata><tw-passagedata pid="10" name="S1 Hub" tags="" position="1825,200" size="100,100">
+(display: &quot;S1 Macro Setup&quot;)\
+### Stakeholder Conversations
+
+There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
 
 You may review the conversation with a person after consulting with them.
 
@@ -91,6 +95,8 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s1VendCompMarketExec), the marketing executive at ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompMarketExec&quot;)[[[Review your conversation-&gt;S1 Vend Comp Market Exec Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Market Exec Convo]]]
 * ($properNameLink: $s1VendCompStan), a big fan of ($properNameLink: $s1VendComp). (if: $s1_people_consulted contains &quot;s1VendCompStan&quot;)[[[Review your conversation-&gt;S1 Vend Comp Stan Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Vend Comp Stan Convo]]]
 * ($properNameLink: $s1Student), a student at ($properNameLink: $s1University). (if: $s1_people_consulted contains &quot;s1Student&quot;)[[[Review your conversation-&gt;S1 Student Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to them-&gt;S1 Student Convo]]]
+
+[[I&#39;m ready to make a decision-&gt;S1 Decide]]
 </tw-passagedata><tw-passagedata pid="11" name="S1 Face Comp Tech Desc" tags="" position="1450,450" size="100,100">
 ### (print: $s1FaceCompTech&#39;s name)
 
@@ -129,7 +135,7 @@ You may review the conversation with a person after consulting with them.
 (set: $properNameLink to (macro: datamap-type _data, [
 	(output:) [($properNameLinkCustom: _data, &quot;name&quot;)]
 ]))
-(set: $manager to (dm: &quot;name&quot;, &quot;Manfred Neiger&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))
+(set: $manager to (dm: &quot;name&quot;, &quot;Manfred Edgar&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))
 (set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))
 }</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="1100,75" size="100,100">{
 (display: &quot;Macro Setup&quot;)
@@ -229,7 +235,46 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1Student&quot;))
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="28" name="S1 Decide" tags="" position="2400,250" size="100,100">
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s1FaceComp) to do?
+
+* [[“Yes! This even lets you collect more real-world training data to make your facial recognition technology better.”-&gt;S1 Use]]
+* [[“You should first create a modified version of your facial recognition technology, so that you’re only collecting and storing the demographic data that ($properNameLink: $s1FaceComp) needs for marketing. Otherwise, you perpetuate scope creep.”-&gt;S1 Modify]]
+* [[“No, this isn’t a good idea. Using facial recognition technology for marketing like this has almost no benefits for customers and creates significant privacy concerns, which might even deter customers.”-&gt;S1 Deny]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="29" name="S1 Use" tags="" position="2550,100" size="100,100">
+### Use Facial Recognition
+
+($properNameLink: $s1FaceComp)’s facial recognition software is installed in hundreds of new ($properNameLink: $s1VendComp) vending machines. The new vending machines are piloted in malls and universities, where they collect images of thousands of people, store what each person bought to provide personalized recommendations for each person.
+
+[[Continue...-&gt;S1 Use Result]]
+</tw-passagedata><tw-passagedata pid="30" name="S1 Modify" tags="" position="2550,250" size="100,100">
+### Modify Facial Recognition
+
+($properNameLinkCustom: $s1FaceCompTechManager, &quot;short&quot;)’s team at ($properNameLink: $s1FaceComp) creates a modified version of the software that uses the same algorithms but only stores demographic information. This modified software is installed in hundreds of new vending machine company vending machines. The new vending machines are piloted at ($properNameLink: $s1University), where they record demographic information of the customers for marketing purposes. In the first few weeks, the vending machines operated successfully.
+
+[[Continue...-&gt;S1 Modify Result]]</tw-passagedata><tw-passagedata pid="31" name="S1 Deny" tags="" position="2550,400" size="100,100">
+### Reject Facial Recognition
+
+($properNameLink: $s1FaceCompRep) is disappointed that this partnership with ($properNameLink: $s1VendComp) won’t work out, but it sounds like this is the best decision for both ($properNameLink: $s1FaceComp) and ($properNameLink: $s1VendComp).
+
+“Thank you for speaking with our various stakeholders and giving us your advice. Based on what we’ve learned from you, Facemap will focus on improving our facial recognition technology so that it can be used for its intended applications in identity verification. It is a shame that we couldn’t secure a client at this moment, but it sounds like it’s the best decision for now. All the best to you and everyone else at ($properNameLink: $consultingCompany)!”
+
+[[Move on to your next project-&gt;S2 Intro Deny]]
+</tw-passagedata><tw-passagedata pid="32" name="S1 Use Result" tags="" position="2700,100" size="100,100">
+### Legal Trouble
+
+However, the use of facial recognition didn’t go unnoticed. A privacy commissioner discovers the usage of this technology, which ($properNameLink: $s1VendComp) didn’t clearly disclose. However, collecting facial data of people without their meaningful consent is illegal in Canada, and ($properNameLink: $s1VendComp) faces significant lawsuits. ($properNameLink: $s1FaceComp), previously reputed for its careful approach to research, is criticized for bringing their unfinished software to the market in an unintended application.
+
+[[Move on to your next project-&gt;S2 Intro Use]]
+</tw-passagedata><tw-passagedata pid="33" name="S2 Intro Use" tags="" position="2850,100" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="S1 Modify Result" tags="" position="2700,250" size="100,100">
+### Error!
+
+However, in the rush to create the modified facial detection software, ($properNameLink: $s1FaceComp) failed to find a software bug that caused software logging messages to be printed to the vending machine screen. Students notice this, and it doesn’t take long for them to discover that the new vending machines have hidden cameras and facial detection software in them. One student journalist writes about this in the school newspaper, and it makes national and international headlines. ($properNameLink: $s1VendComp) is accused of breaching its customers’ privacy, as they didn’t disclose their use of facial detection software. Meanwhile, ($properNameLink: $s1FaceComp) is criticized for bringing their unfinished software to the market in an unintended application.
+
+[[Move on to your next project-&gt;S2 Intro Modify]]
+</tw-passagedata><tw-passagedata pid="35" name="S2 Intro Modify" tags="" position="2850,250" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
