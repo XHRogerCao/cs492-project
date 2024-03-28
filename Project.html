@@ -238,6 +238,7 @@ You may review the conversation with a person after consulting with them.
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1Student&quot;))
 </tw-passagedata><tw-passagedata pid="28" name="S1 Decide" tags="" position="2400,250" size="100,100">
+(display: &quot;S1 Macro Setup&quot;)\
 ### Make a decision
 
 Based on what you heard from stakeholders, what do you tell ($properNameLink: $s1FaceComp) to do?
@@ -284,15 +285,37 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 However, in the rush to create the modified facial detection software, ($properNameLink: $s1FaceComp) failed to find a software bug that caused software logging messages to be printed to the vending machine screen. Students notice this, and it doesn’t take long for them to discover that the new vending machines have hidden cameras and facial detection software in them. One student journalist writes about this in the school newspaper, and it makes national and international headlines. ($properNameLink: $s1VendComp) is accused of breaching its customers’ privacy, as they didn’t disclose their use of facial detection software. Meanwhile, ($properNameLink: $s1FaceComp) is criticized for bringing their unfinished software to the market in an unintended application.
 
 [[Move on to your next project-&gt;S2 Intro Modify]]
-</tw-passagedata><tw-passagedata pid="35" name="S2 Intro Modify" tags="" position="2850,250" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="500,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
-“Anyway, for your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size IoT company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, company has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
+</tw-passagedata><tw-passagedata pid="35" name="S2 Intro Modify" tags="" position="2850,250" size="100,100">
+### Second Job
+
+With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“Well, it could have gone better. I can’t fault you too much for this reputation disaster. After all, it is mainly caused by ($properNameLink: $s1FaceComp)’s faulty programming and ($properNameLink: $s1VendComp)’s lack of disclosure regarding the usage of facial recognition technology in their machines. Still, from now on, we need to better evaluate the risks that our decisions can carry, especially towards the reputation of our client.”
+
+(display: &quot;S2 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100">
+### Second Job
+
+With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“It is a shame that our client isn’t able to secure a lucrative business deal at the moment, but there is nothing we can do about it now. I believe that you made the best decision that you could at the moment. Keep up with the good work.”
+
+(display: &quot;S2 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="500,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
+“Anyway, for your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size IoT company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, ($properNameLink: $s2Comp) has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
 
 Proceed with this project. [go to S2 explanation]
 Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong. [go to S2 quit]
 </tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="500,775" size="100,100">{
 (display: &quot;S1 Macro Setup&quot;)
 (set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
-}</tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="800,1025" size="100,100">
+### (print: $s2Comp&#39;s name)
+
+(Temp) Description about ($properName: $s2Comp).
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
