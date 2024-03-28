@@ -12,11 +12,13 @@
 <tw-storydata name="Project" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
   /* Uncomment the following on production */
   /* display: none; */
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="S1 Intro" tags="" position="1100,200" size="100,100">
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="S1 Intro" tags="" position="800,200" size="100,100">
 (display: &quot;S1 Macro Setup&quot;)\
 ### First Job
 
-Your manager, ($properNameLink: $manager), assigns you to a project with ($properNameLink: $s1FaceComp).  ($properNameLink: $s1FaceComp) is a well-funded startup that focuses on facial recognition technology. They have spent a few years developing their technology and now they have a software that can identify a person based on an image of their face. They want you to advise them on what products this technology can be used for, so that they can enter the market.
+Your manager, ($properNameLink: $manager), invites you to his office and assigns you your first project.
+
+“Here is an easy project for you to start. A company called ($properNameLink: $s1FaceComp) has a project that needs your advice on. ($properNameLink: $s1FaceComp) is a well-funded startup that focuses on facial recognition technology. They have spent a few years developing their technology and now they have a software that can identify a person based on an image of their face. They want you to advise them on what products this technology can be used for, so that they can enter the market.”
 
 [[Proceed with this project-&gt;S1 Explanation]]
 [[Refuse to take on this project because you think that all facial recognition technology is dangerous and unethical-&gt;S1 Quit]]
@@ -36,20 +38,20 @@ Here are a few more.
 (Temp) Description about ($properName: $manager).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="4" name="S1 Face Comp Desc" tags="" position="900,325" size="100,100">
+</tw-passagedata><tw-passagedata pid="4" name="S1 Face Comp Desc" tags="" position="1075,325" size="100,100">
 ### (print: $s1FaceComp&#39;s name)
 
 (Temp) Description about ($properName: $s1FaceComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="5" name="S1 Quit" tags="" position="1100,325" size="100,100">
+</tw-passagedata><tw-passagedata pid="5" name="S1 Quit" tags="" position="800,325" size="100,100">
 ### Refuse Job
 
 You refuse to take on the project with ($properNameLink: $s1FaceComp) because you think that all facial recognition technology is dangerous and unethical. As you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
 
 =&gt;&lt;=
 ### GAME OVER
-</tw-passagedata><tw-passagedata pid="6" name="S1 Explanation" tags="" position="1300,200" size="100,100">
+</tw-passagedata><tw-passagedata pid="6" name="S1 Explanation" tags="" position="1150,200" size="100,100">
 (display: &quot;S1 Macro Setup&quot;)\
 ### Job Accepted
 
@@ -69,13 +71,13 @@ They tell you the following:
 (Temp) Description about ($properName: $consultingCompany).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="8" name="S1 Face Comp Rep Desc" tags="" position="900,450" size="100,100">
+</tw-passagedata><tw-passagedata pid="8" name="S1 Face Comp Rep Desc" tags="" position="1225,325" size="100,100">
 ### (print: $s1FaceCompRep&#39;s name)
 
 (Temp) Description about ($properName: $s1FaceCompRep).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="9" name="S1 Vend Comp Desc" tags="" position="900,575" size="100,100">
+</tw-passagedata><tw-passagedata pid="9" name="S1 Vend Comp Desc" tags="" position="1075,450" size="100,100">
 ### (print: $s1VendComp&#39;s name)
 
 (Temp) Description about ($properName: $s1VendComp).
@@ -137,7 +139,7 @@ You may review the conversation with a person after consulting with them.
 ]))
 (set: $manager to (dm: &quot;name&quot;, &quot;Manfred Edgar&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))
 (set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))
-}</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="1100,75" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="800,75" size="100,100">{
 (display: &quot;Macro Setup&quot;)
 (set: $s1_questions_limit to 2)
 (if: $s1_people_consulted is not a dataset)[(set: $s1_people_consulted to (ds:))]
@@ -220,7 +222,7 @@ You may review the conversation with a person after consulting with them.
 ($properName: $s1Student) is a student at ($properName: $s1University), which has ($properNameLink: $s1VendComp)&#39;s vending machines installed.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="26" name="S1 University Desc" tags="" position="900,700" size="100,100">
+</tw-passagedata><tw-passagedata pid="26" name="S1 University Desc" tags="" position="1225,450" size="100,100">
 ### (print: $s1University&#39;s name)
 
 (Temp) Description about ($properName: $s1University).
@@ -236,6 +238,7 @@ You may review the conversation with a person after consulting with them.
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1Student&quot;))
 </tw-passagedata><tw-passagedata pid="28" name="S1 Decide" tags="" position="2400,250" size="100,100">
+(display: &quot;S1 Macro Setup&quot;)\
 ### Make a decision
 
 Based on what you heard from stakeholders, what do you tell ($properNameLink: $s1FaceComp) to do?
@@ -268,13 +271,58 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 However, the use of facial recognition didn’t go unnoticed. A privacy commissioner discovers the usage of this technology, which ($properNameLink: $s1VendComp) didn’t clearly disclose. However, collecting facial data of people without their meaningful consent is illegal in Canada, and ($properNameLink: $s1VendComp) faces significant lawsuits. ($properNameLink: $s1FaceComp), previously reputed for its careful approach to research, is criticized for bringing their unfinished software to the market in an unintended application.
 
 [[Move on to your next project-&gt;S2 Intro Use]]
-</tw-passagedata><tw-passagedata pid="33" name="S2 Intro Use" tags="" position="2850,100" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="S1 Modify Result" tags="" position="2700,250" size="100,100">
+</tw-passagedata><tw-passagedata pid="33" name="S2 Intro Use" tags="" position="2850,100" size="100,100">
+### Second Job
+
+With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“It’s a shame that things turned out the way it did. We should be careful when giving advice the next time, especially if the advice that we give can run afoul of the law. We don’t want to be held liable for the advice that we give, do we?”
+
+(display: &quot;S2 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="34" name="S1 Modify Result" tags="" position="2700,250" size="100,100">
 ### Error!
 
 However, in the rush to create the modified facial detection software, ($properNameLink: $s1FaceComp) failed to find a software bug that caused software logging messages to be printed to the vending machine screen. Students notice this, and it doesn’t take long for them to discover that the new vending machines have hidden cameras and facial detection software in them. One student journalist writes about this in the school newspaper, and it makes national and international headlines. ($properNameLink: $s1VendComp) is accused of breaching its customers’ privacy, as they didn’t disclose their use of facial detection software. Meanwhile, ($properNameLink: $s1FaceComp) is criticized for bringing their unfinished software to the market in an unintended application.
 
 [[Move on to your next project-&gt;S2 Intro Modify]]
-</tw-passagedata><tw-passagedata pid="35" name="S2 Intro Modify" tags="" position="2850,250" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="35" name="S2 Intro Modify" tags="" position="2850,250" size="100,100">
+### Second Job
+
+With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“Well, it could have gone better. I can’t fault you too much for this reputation disaster. After all, it is mainly caused by ($properNameLink: $s1FaceComp)’s faulty programming and ($properNameLink: $s1VendComp)’s lack of disclosure regarding the usage of facial recognition technology in their machines. Still, from now on, we need to better evaluate the risks that our decisions can carry, especially towards the reputation of our client.”
+
+(display: &quot;S2 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100">
+### Second Job
+
+With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“It is a shame that our client isn’t able to secure a lucrative business deal at the moment, but there is nothing we can do about it now. I believe that you made the best decision that you could at the moment. Keep up with the good work.”
+
+(display: &quot;S2 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="800,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
+“Anyway, for your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size IoT company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, ($properNameLink: $s2Comp) has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
+
+[[Proceed with this project-&gt;S2 Explanation]]
+[[Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong-&gt;S2 Quit]]
+</tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="800,775" size="100,100">{
+(display: &quot;S1 Macro Setup&quot;)
+(set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
+}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1150,1025" size="100,100">
+### (print: $s2Comp&#39;s name)
+
+(Temp) Description about ($properName: $s2Comp).
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="40" name="S2 Explanation" tags="" position="1150,900" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
+### Refuse Job
+
+You refuse to take on the project with company because you think that any form of surveillance in the workplace is unethical and wrong. ($properNameLink: $manager) points out that ($properNameLink: $consultingCompany) has security cameras in the office to prevent theft in the workplace, which themselves are a form of workplace surveillance. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
+
+=&gt;&lt;=
+### GAME OVER
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
