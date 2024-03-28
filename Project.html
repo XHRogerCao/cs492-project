@@ -301,20 +301,27 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 “It is a shame that our client isn’t able to secure a lucrative business deal at the moment, but there is nothing we can do about it now. I believe that you made the best decision that you could at the moment. Keep up with the good work.”
 
 (display: &quot;S2 Intro&quot;)
-</tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="500,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
+</tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="800,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
 “Anyway, for your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size IoT company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, ($properNameLink: $s2Comp) has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
 
-Proceed with this project. [go to S2 explanation]
-Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong. [go to S2 quit]
-</tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="500,775" size="100,100">{
+[[Proceed with this project-&gt;S2 Explanation]]
+[[Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong-&gt;S2 Quit]]
+</tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="800,775" size="100,100">{
 (display: &quot;S1 Macro Setup&quot;)
 (set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
-}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="800,1025" size="100,100">
+}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1150,1025" size="100,100">
 ### (print: $s2Comp&#39;s name)
 
 (Temp) Description about ($properName: $s2Comp).
 
 (display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="40" name="S2 Explanation" tags="" position="1150,900" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
+### Refuse Job
+
+You refuse to take on the project with company because you think that any form of surveillance in the workplace is unethical and wrong. ($properNameLink: $manager) points out that ($properNameLink: $consultingCompany) has security cameras in the office to prevent theft in the workplace, which themselves are a form of workplace surveillance. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
+
+=&gt;&lt;=
+### GAME OVER
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
