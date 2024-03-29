@@ -141,7 +141,7 @@ You may review the conversation with a person after consulting with them.
 (set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))
 }</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="800,75" size="100,100">{
 (display: &quot;Macro Setup&quot;)
-(set: $s1_questions_limit to 2)
+(set: $s1_questions_limit to 3)
 (if: $s1_people_consulted is not a dataset)[(set: $s1_people_consulted to (ds:))]
 (set: $s1_can_ask to (macro: [
 	(output-data: $s1_people_consulted&#39;s length &lt; $s1_questions_limit)
@@ -308,6 +308,12 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 [[Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong-&gt;S2 Quit]]
 </tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="800,775" size="100,100">{
 (display: &quot;S1 Macro Setup&quot;)
+(set: $s2_questions_limit to 3)
+(if: $s2_people_consulted is not a dataset)[(set: $s2_people_consulted to (ds:))]
+(set: $s2_can_ask to (macro: [
+	(output-data: $s2_people_consulted&#39;s length &lt; $s2_questions_limit)
+]))
+
 (set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
 (set: $s2PartnerComp to (dm: &quot;name&quot;, &quot;Motor Generals&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Partner Comp Desc&quot;))
 
@@ -341,7 +347,13 @@ You refuse to take on the project with company because you think that any form o
 
 =&gt;&lt;=
 ### GAME OVER
-</tw-passagedata><tw-passagedata pid="42" name="S2 Hub" tags="" position="1825,900" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="42" name="S2 Hub" tags="" position="1825,900" size="100,100">
+(display: &quot;S2 Macro Setup&quot;)\
+### Stakeholder Conversations
+
+There are a few people that you can consult. Due to time constraints, you can only talk to $s2_questions_limit people before making a decision.
+
+You may review the conversation with a person after consulting with them.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
