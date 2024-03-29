@@ -154,7 +154,7 @@ You may review the conversation with a person after consulting with them.
 &lt;!-- Names of people to talk to --&gt;
 (set: $s1FaceCompTech to (dm: &quot;name&quot;, &quot;Gerald Princeton&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Desc&quot;, &quot;short&quot;, &quot;Gerald&quot;))
 (set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Tech Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;TM&quot;))
-(set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Market Exec&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;ME&quot;))
+(set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Candice Pluto&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;Candice&quot;))
 (set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Market Junior&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;MJ&quot;))
 (set: $s1VendCompStan to (dm: &quot;name&quot;, &quot;Stan&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Stan Desc&quot;, &quot;short&quot;, &quot;Stan&quot;))
 (set: $s1Student to (dm: &quot;name&quot;, &quot;Ocean&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Student Desc&quot;, &quot;short&quot;, &quot;Ocean&quot;))
@@ -314,7 +314,7 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 	(output-data: $s2_people_consulted&#39;s length &lt; $s2_questions_limit)
 ]))
 
-(set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
+(set: $s2Comp to (dm: &quot;name&quot;, &quot;Isaac-Ohm Technologies&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
 (set: $s2PartnerComp to (dm: &quot;name&quot;, &quot;Motor Generals&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Partner Comp Desc&quot;))
 
 &lt;!-- Names of people to talk to --&gt;
@@ -363,7 +363,18 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s2PartnerManager), a product manager at ($properNameLink: $s2PartnerComp), one of ($properNameLink: $s2Comp)’s major business partners. (if: $s2_people_consulted contains &quot;s2PartnerManager&quot;)[[[Review your conversation-&gt;S2 Partner Manager Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Partner Manager Convo]]]
 
 [[I&#39;m ready to make a decision-&gt;S2 Decide]]
-</tw-passagedata><tw-passagedata pid="43" name="S2 Decide" tags="" position="2400,900" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="S2 CEO Convo" tags="" position="1450,1025" size="100,100">
+</tw-passagedata><tw-passagedata pid="43" name="S2 Decide" tags="" position="2400,900" size="100,100">
+(display: &quot;S2 Macro Setup&quot;)\
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s2Comp) to do?
+
+* [[“Don’t implement any new security measures. Employees wouldn’t sabotage their employer like some are suggesting, and adding any new security measures just increases surveillance and causes paranoia.”-&gt;S2 Nothing]]
+* [[“Install security cameras in the office, but don’t give the security team administrator privileges to view employees’ activity on company computers and devices. Security cameras in the office will give employees a sense of safety and deter theft without being overly intrusive.”-&gt;S2 Cameras]]
+* [[“Give the security team administrator privileges to view employees’ activity on company computers and devices, but don’t install security cameras in the office. This way, the security team can investigate all remote and in-office employees equally to find the source of the leaks.”-&gt;S2 Computers]]
+* [[“Implement both security measures under consideration. Install security cameras in the office and give the security team administrator privileges. This makes it easier to connect the dots between how and why devices are going missing and who’s leaking information, if this happens again in the future.”-&gt;S2 Both]]
+* [[“Implement both security measures under consideration, and more. Remote workers have the same responsibilities as in-office ones, so install cameras at their home workstations. Also use employees’ computer activity data as performance metrics to track which teams and/or individuals are performing well or poorly.”-&gt;S2 More]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="44" name="S2 CEO Convo" tags="" position="1450,1025" size="100,100">
 ### Talk to ($properNameLinkCustom: $s2CEO, &quot;short&quot;)
 
 “Myself and the rest of the executives at ($properNameLink: $s2Comp) all agree that installing security cameras in the office is a top priority. Personally, I think this should also extend to remote workers—we can install cameras at their home workstations—but the other executives don’t seem to agree.
@@ -457,7 +468,69 @@ You may review the conversation with a person after consulting with them.
 ($properName: $s2PartnerComp) is a car manufacturing company, and a major business partner of ($properNameLink: $s2Comp). ($properName: $s2PartnerComp) often receives ($properNameLink: $s2Comp)’s new IoT devices before they are released to the broader market, and gains an advantage over its competitors by having these devices already integrated into their new cars.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="57" name="S2 Nothing" tags="" position="2550,650" size="100,100">
+### Do Nothing
+
+Based on your recommendation, ($properNameLink: $s2Comp) doesn’t implement any new security measures. Senior management reiterates that all prototypes and design plans are confidential and not to be shared outside the company.
+
+[[Continue...-&gt;S2 Nothing Result]]</tw-passagedata><tw-passagedata pid="58" name="S2 Cameras" tags="" position="2550,775" size="100,100">
+### Install Cameras
+
+($properNameLink: $s2Comp) installs security cameras in the office, a move received largely positively by employees. Though the cause of the original design leaks and missing prototypes is never discovered, prototypes stop going missing and there are no more leaks. Morale improves amongst the different departments and across the company.
+
+[[Continue...-&gt;S2 Cameras Result]]</tw-passagedata><tw-passagedata pid="59" name="S2 Computers" tags="" position="2550,900" size="100,100">
+### Implement Computer Surveillance
+
+($properNameLink: $s2Comp) gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. This decision is mostly unpopular amongst members of the hardware, firmware, and software departments, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
+
+[[Continue...-&gt;S2 Computers Result]]
+</tw-passagedata><tw-passagedata pid="60" name="S2 Both" tags="" position="2550,1025" size="100,100">
+### Implement Both
+
+($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. This decision is not as well-received, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
+
+[[Continue...-&gt;S2 Both Result]]
+</tw-passagedata><tw-passagedata pid="61" name="S2 More" tags="" position="2550,1150" size="100,100">
+### Implement Both
+
+($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. Despite hesitancy from other executives, ($properNameLink: $s2CEO) announces at a company town hall that company will also be implementing a remote monitoring system to view remote workers’ workstations at home and installing productivity management software on all company computers, which will allow senior management to track how much work every team and every individual is getting done.
+
+[[Continue...-&gt;S2 More Result]]</tw-passagedata><tw-passagedata pid="62" name="S2 Nothing Result" tags="" position="2700,650" size="100,100">
+### Stolen Prototypes
+
+However, prototypes continue to go missing from the office and their designs continue to be publicly leaked. Some employees leave the company because they feel unsafe and ($properNameLink: $s2Comp) comes under public scrutiny for its inability to maintain proprietary information. ($properNameLink: $s2PartnerComp) takes a hit as car buyers choose its competitors and pressures ($properNameLink: $s2Comp) to implement new security measures. By the time ($properNameLink: $s2Comp) installs security cameras in the office, it has lost many of its employees and both ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp) have lost their competitive advantage in their respective industries.
+
+[[Move on to your next project-&gt;S3 Intro Nothing]]
+</tw-passagedata><tw-passagedata pid="63" name="S3 Intro Nothing" tags="" position="3000,650" size="100,100"></tw-passagedata><tw-passagedata pid="64" name="S2 Cameras Result" tags="" position="2700,775" size="100,100">
+### Business is Booming
+
+($properNameLink: $s2Comp) introduces its newest sensor to the market, and though its original design was previously leaked, the leak is largely forgotten and there is significant media attention on the new product, which has also been modified from its original design. At the same time, ($properNameLink: $s2PartnerComp) introduces a new car model that includes the new sensor, which is also highly successful.
+
+[[Move on to your next project-&gt;S3 Intro Cameras]]
+</tw-passagedata><tw-passagedata pid="65" name="S3 Intro Cameras" tags="" position="3000,775" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="S2 Computers Result" tags="" position="2700,900" size="100,100">
+### Cold Trails
+
+However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity.
+
+[[Continue...-&gt;S2 Computers Result 2]]</tw-passagedata><tw-passagedata pid="67" name="S2 Computers Result 2" tags="" position="2850,900" size="100,100">
+### Leaked Info
+
+A few days before company introduces its newest sensor to the market, some of the finished devices disappear from the office, and a major tech media outlet publishes a comprehensive “preview” of the product that company never authorized. This leak is yet another blow to ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp), and there is growing resentment toward the security team and senior leadership for their inability to prevent further leaks. Unhappy with being constantly monitored with no results, several employees leave the company.
+
+[[Move on to your next project-&gt;S3 Intro Computers]]
+</tw-passagedata><tw-passagedata pid="68" name="S3 Intro Computers" tags="" position="3000,900" size="100,100"></tw-passagedata><tw-passagedata pid="69" name="S2 Both Result" tags="" position="2700,1025" size="100,100">
+### Cold Trails
+
+However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity as prototypes stop going missing and company successfully introduces its newest sensor to the market. As the security team continues not to find any evidence of security concerns, employees question why the administrator privileges were granted.
+
+[[Move on to your next project-&gt;S3 Intro Both]]
+</tw-passagedata><tw-passagedata pid="70" name="S3 Intro Both" tags="" position="3000,1025" size="100,100"></tw-passagedata><tw-passagedata pid="71" name="S2 More Result" tags="" position="2700,1150" size="100,100">
+### Broken Trust
+
+This announcement is met with widespread criticism across the company and many employees—both remote and in-office workers—openly refuse to consent to these measures. Under Ontario law, implementing these surveillance methods without employee consent is illegal. Upon further consultation with ($properNameLink: $s2Comp)’s other executives, ($properNameLink: $s2CEO) realizes her mistake and tries to backtrack, but trust is already broken. Many employees leave ($properNameLink: $s2Comp), forcing a long delay in releasing its newest sensor to the market. By this point, both ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp) have lost their competitive advantage in their respective industries.
+
+[[Move on to your next project-&gt;S3 Intro More]]
+</tw-passagedata><tw-passagedata pid="72" name="S3 Intro More" tags="" position="3000,1150" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
