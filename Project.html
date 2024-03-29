@@ -324,7 +324,7 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 (set: $s2HardwareTester to (dm: &quot;name&quot;, &quot;Hardware Tester&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Hardware Tester Desc&quot;, &quot;short&quot;, &quot;HT&quot;))
 (set: $s2Security to (dm: &quot;name&quot;, &quot;Security&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Security Desc&quot;, &quot;short&quot;, &quot;Security&quot;))
 (set: $s2PartnerManager to (dm: &quot;name&quot;, &quot;Partner Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Partner Manager Desc&quot;, &quot;short&quot;, &quot;PM&quot;))
-}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1150,1025" size="100,100">
+}</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1075,1025" size="100,100">
 ### (print: $s2Comp&#39;s name)
 
 (Temp) Description about ($properName: $s2Comp).
@@ -358,9 +358,12 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s2CEO), the CEO of ($properNameLink: $s2Comp). (if: $s2_people_consulted contains &quot;s2CEO&quot;)[[[Review your conversation-&gt;S2 CEO Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to her-&gt;S2 CEO Convo]]]
 * ($properNameLink: $s2RemoteWorker), a software developer at ($properNameLink: $s2Comp) who works remotely. (if: $s2_people_consulted contains &quot;s2RemoteWorker&quot;)[[[Review your conversation-&gt;S2 Remote Worker Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Remote Worker Convo]]]
 * ($properNameLink: $s2OfficeWorker), a firmware developer at ($properNameLink: $s2Comp) who frequently works in the office. (if: $s2_people_consulted contains &quot;s2OfficeWorker&quot;)[[[Review your conversation-&gt;S2 Office Worker Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Office Worker Convo]]]
+* ($properNameLink: $s2HardwareTester), a new hardware tester at ($properNameLink: $s2Comp). (if: $s2_people_consulted contains &quot;s2HardwareTester&quot;)[[[Review your conversation-&gt;S2 Hardware Tester Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Hardware Tester Convo]]]
+* ($properNameLink: $s2Security), a member of the security team at ($properNameLink: $s2Comp). (if: $s2_people_consulted contains &quot;s2Security&quot;)[[[Review your conversation-&gt;S2 Security Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Security Convo]]]
+* ($properNameLink: $s2PartnerManager), a product manager at ($properNameLink: $s2PartnerComp), one of ($properNameLink: $s2Comp)’s major business partners. (if: $s2_people_consulted contains &quot;s2PartnerManager&quot;)[[[Review your conversation-&gt;S2 Partner Manager Convo]]] (else-if: ($s2_can_ask:)) [[[Talk to them-&gt;S2 Partner Manager Convo]]]
 
 [[I&#39;m ready to make a decision-&gt;S2 Decide]]
-</tw-passagedata><tw-passagedata pid="43" name="S2 Decide" tags="" position="2600,900" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="S2 CEO Convo" tags="" position="1450,1025" size="100,100">
+</tw-passagedata><tw-passagedata pid="43" name="S2 Decide" tags="" position="2400,900" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="S2 CEO Convo" tags="" position="1450,1025" size="100,100">
 ### Talk to ($properNameLinkCustom: $s2CEO, &quot;short&quot;)
 
 “Myself and the rest of the executives at ($properNameLink: $s2Comp) all agree that installing security cameras in the office is a top priority. Personally, I think this should also extend to remote workers—we can install cameras at their home workstations—but the other executives don’t seem to agree.
@@ -405,6 +408,53 @@ You may review the conversation with a person after consulting with them.
 ### (print: $s2RemoteWorker&#39;s name)
 
 ($properName: $s2RemoteWorker) is a longtime firmware developer at ($properNameLink: $s2Comp), having been with the company since its first product release. They frequently work in the office but also keep several hardware prototypes at home for days when they work from home.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="50" name="S2 Hardware Tester Convo" tags="" position="1900,1025" size="100,100">
+### Talk to ($properNameLinkCustom: $s2HardwareTester, &quot;short&quot;)
+
+“I took this job because I wanted to move out of manufacturing and into hardware testing, and because ($properNameLink: $s2Comp) seemed to have a great workplace culture when I came for my interview. But in my first few weeks here, I’ve witnessed a lot of paranoia around the missing prototypes and media leaks. I always keep my employee badge displayed on my jacket, but I’ve had several people stop me to ask if I’m supposed to be here—probably because I’m new.
+
+&quot;Surveillance was pretty common in my past manufacturing jobs. One made us all wear haptic wristbands to track our activity and productivity. My last employer introduced voluntary microchip implants in place of access badges, and this made me really uncomfortable. Even though I didn’t participate, most employees did, so I felt a lot of pressure to get the microchip as well. I left that job because of that, and I was hoping that joining ($properNameLink: $s2Comp) as a hardware tester would be a better experience than the heavy surveillance in the manufacturing industry. Obviously, we’re dealing with a big security issue right now, but I hope that ($properNameLink: $s2Comp) isn’t making decisions out of distrusting employees.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s2_people_consulted to it + (dataset: &quot;s2HardwareTester&quot;))
+</tw-passagedata><tw-passagedata pid="51" name="S2 Hardware Tester Desc" tags="" position="1900,1150" size="100,100">
+### (print: $s2HardwareTester&#39;s name)
+
+($properName: $s2RemoteWorker) is a new hardware tester at ($properNameLink: $s2Comp), having just finished onboarding.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="52" name="S2 Security Convo" tags="" position="2050,1025" size="100,100">
+### Talk to ($properNameLinkCustom: $s2Security, &quot;short&quot;)
+
+“I think ($properNameLink: $s2Comp) absolutely needs better security measures. At my previous corporate workplaces, the security teams could see anything that anyone was doing on company devices if needed, and it made it very easy to catch people when proprietary information was leaked. There’s no reason why ($properNameLink: $s2Comp) shouldn’t do the same. If someone isn’t doing anything wrong, then they shouldn’t be worried if the security team can see what they’re doing. Same with security cameras—that’s a no-brainer.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s2_people_consulted to it + (dataset: &quot;s2Security&quot;))
+</tw-passagedata><tw-passagedata pid="53" name="S2 Security Desc" tags="" position="2050,1150" size="100,100">
+### (print: $s2HardwareTester&#39;s name)
+
+($properName: $s2RemoteWorker) is a member of the security team at ($properNameLink: $s2Comp). They have previously worked in corporate workplace security.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="54" name="S2 Partner Manager Convo" tags="" position="2200,1025" size="100,100">
+### Talk to ($properNameLinkCustom: $s2PartnerManager, &quot;short&quot;)
+
+“Until recently, ($properNameLink: $s2PartnerComp) has had nothing but positive experiences with ($properNameLink: $s2Comp). It’s not up to me to comment on what ($properNameLink: $s2Comp) should do internally, but prototypes have been going missing—we assume stolen—and there is good reason to suspect that this is related to the design leaks as well. Any time ($properNameLink: $s2Comp) has something leaked publicly, that hurts us, too, because we’re otherwise the first ones to get new information about—and finished versions of—their upcoming devices. So it’s important to us at ($properNameLink: $s2PartnerComp) that ($properNameLink: $s2Comp) works on some better security measures.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s2_people_consulted to it + (dataset: &quot;s2PartnerManager&quot;))
+</tw-passagedata><tw-passagedata pid="55" name="S2 Partner Manager Desc" tags="" position="2200,1150" size="100,100">
+### (print: $s2PartnerManager&#39;s name)
+
+($properName: $s2PartnerManager) is a product manager at ($properNameLink: $s2PartnerComp), one of ($properNameLink: $s2Comp)’s major business partners.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="56" name="S2 Partner Comp Desc" tags="" position="1225,1025" size="100,100">
+### (print: $s2PartnerComp&#39;s name)
+
+($properName: $s2PartnerComp) is a car manufacturing company, and a major business partner of ($properNameLink: $s2Comp). ($properName: $s2PartnerComp) often receives ($properNameLink: $s2Comp)’s new IoT devices before they are released to the broader market, and gains an advantage over its competitors by having these devices already integrated into their new cars.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata></tw-storydata>
