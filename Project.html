@@ -309,20 +309,39 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 </tw-passagedata><tw-passagedata pid="38" name="S2 Macro Setup" tags="" position="800,775" size="100,100">{
 (display: &quot;S1 Macro Setup&quot;)
 (set: $s2Comp to (dm: &quot;name&quot;, &quot;Company&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
+(set: $s2PartnerComp to (dm: &quot;name&quot;, &quot;Motor Generals&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Partner Comp Desc&quot;))
+
+&lt;!-- Names of people to talk to --&gt;
+(set: $s2CEO to (dm: &quot;name&quot;, &quot;Ellen Ma&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 CEO Desc&quot;, &quot;short&quot;, &quot;Ellen&quot;))
+(set: $s2RemoteWorker to (dm: &quot;name&quot;, &quot;Remote Worker&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Remote Worker Desc&quot;, &quot;short&quot;, &quot;RW&quot;))
+(set: $s2OfficeWorker to (dm: &quot;name&quot;, &quot;Office Worker&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Office Worker Desc&quot;, &quot;short&quot;, &quot;OW&quot;))
+(set: $s2HardwareTester to (dm: &quot;name&quot;, &quot;Hardware Tester&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Hardware Tester Desc&quot;, &quot;short&quot;, &quot;HT&quot;))
+(set: $s2Security to (dm: &quot;name&quot;, &quot;Security&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Security Desc&quot;, &quot;short&quot;, &quot;Security&quot;))
+(set: $s2PartnerManager to (dm: &quot;name&quot;, &quot;Partner Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Partner Manager Desc&quot;, &quot;short&quot;, &quot;PM&quot;))
 }</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1150,1025" size="100,100">
 ### (print: $s2Comp&#39;s name)
 
 (Temp) Description about ($properName: $s2Comp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="40" name="S2 Explanation" tags="" position="1150,900" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
+</tw-passagedata><tw-passagedata pid="40" name="S2 Explanation" tags="" position="1150,900" size="100,100">
+(display: &quot;S2 Macro Setup&quot;)\
+### Job Accepted
+
+You meet with a representative from ($properNameLink: $s2Comp) to find out more details about your assignment. They tell you the following:
+
+“Company started out small, where everyone worked on the hardware, firmware, and software for our IoT devices. We’ve grown since then, and those are now three distinct departments with their own sub-teams. We also have a small security team that handles internal reports of security issues, both physical and technological security.
+
+&quot;Unfortunately, we’ve had a few cases recently where prototype devices have gone missing and our design plans have been leaked to the public. We want to build a culture of trust, but we also can’t afford for this to keep happening. We’re considering installing security cameras in the office and giving the security team administrator privileges to be able to view employees’ activity on company computers and devices. We would like you to discuss with stakeholders to determine if these are good ideas.”
+
+[[Talk to the stakeholders-&gt;S2 Hub]]</tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
 ### Refuse Job
 
 You refuse to take on the project with company because you think that any form of surveillance in the workplace is unethical and wrong. ($properNameLink: $manager) points out that ($properNameLink: $consultingCompany) has security cameras in the office to prevent theft in the workplace, which themselves are a form of workplace surveillance. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
 
 =&gt;&lt;=
 ### GAME OVER
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="42" name="S2 Hub" tags="" position="1825,900" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
