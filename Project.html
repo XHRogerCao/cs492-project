@@ -18,20 +18,21 @@
 
 Your manager, ($properNameLink: $manager), invites you to his office and assigns you your first project.
 
-“Here is an easy project for you to start. A company called ($properNameLink: $s1FaceComp) has a project that needs your advice on. ($properNameLink: $s1FaceComp) is a well-funded startup that focuses on facial recognition technology. They have spent a few years developing their technology and now they have a software that can identify a person based on an image of their face. They want you to advise them on what products this technology can be used for, so that they can enter the market.”
+“Here is an easy project for you to start. A company called ($properNameLink: $s1FaceComp) has a project that needs your advice. ($properNameLink: $s1FaceComp) is a well-funded startup that focuses on facial recognition technology. They have spent a few years developing their technology and now they have a software that can identify a person based on an image of their face. They want you to advise them on what products this technology can be used for, so that they can enter the market.”
 
 [[Proceed with this project-&gt;S1 Explanation]]
 [[Refuse to take on this project because you think that all facial recognition technology is dangerous and unethical-&gt;S1 Quit]]
 </tw-passagedata><tw-passagedata pid="2" name="Intro" tags="" position="500,200" size="100,100">
 (display: &quot;Macro Setup&quot;)\
-### Introduction
-(Temp) Welcome! This is the intro to the game!
+### 492 Consulting
+//Congratulations! I am pleased to offer you the position of Consultant at ($properNameLink: $consultingCompany)! We are a tech consulting organization. Your job consists of consulting on various tech projects at different companies. As an external consultant in each of these projects, your responsibility is to advise them on the best decisions to make. Each project also has a budgeted timeline; you must make your decision within the given constraints.
 
-Add text here to describe what we are doing a bit more.
+I look forward to working with you. 
 
-Here are a few more.
+Sincerely, 
+($properNameLink: $manager)//
 
-[[Let&#39;s Begin!-&gt;S1 Intro]]
+[[Accept Job-&gt;S1 Intro]]
 </tw-passagedata><tw-passagedata pid="3" name="Manager Desc" tags="" position="500,325" size="100,100">
 ### Manager (print: $manager&#39;s name)
 
@@ -47,7 +48,7 @@ Here are a few more.
 </tw-passagedata><tw-passagedata pid="5" name="S1 Quit" tags="" position="800,325" size="100,100">
 ### Refuse Job
 
-You refuse to take on the project with ($properNameLink: $s1FaceComp) because you think that all facial recognition technology is dangerous and unethical. As you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
+You refuse to take on the project with ($properNameLink: $s1FaceComp) because you think that all facial recognition technology is dangerous and unethical. As you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, the company is forced to let go of several employees, and you lose your job.
 
 =&gt;&lt;=
 ### GAME OVER
@@ -59,7 +60,7 @@ You meet with ($properNameLink: $s1FaceCompRep), a representative from ($properN
 
 They tell you the following:
 
-“($properNameLink: $s1FaceComp) started with the goal of developing some of the most accurate facial recognition technology in the world, that can identify a person based on even a low-resolution image of their face. This goal is ongoing, but we have been facing pressure from investors to put a product into the market.
+“($properNameLink: $s1FaceComp) started with the goal of developing some of the most accurate facial recognition technology in the world. It can identify a person based on even a low-resolution image of their face. This goal is ongoing, but we have been facing pressure from investors to put a product onto the market.
 
 &quot;Our current technology isn’t accurate enough for our standards to be used to uniquely identify people, so we don’t want to market it as that. Since it is over 99% accurate for matching basic demographic information like age and gender, we think it could be useful for marketing applications.
 
@@ -147,15 +148,15 @@ You may review the conversation with a person after consulting with them.
 	(output-data: $s1_people_consulted&#39;s length &lt; $s1_questions_limit)
 ]))
 (set: $s1FaceComp to (dm: &quot;name&quot;, &quot;Facemap&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Desc&quot;))
-(set: $s1FaceCompRep to (dm: &quot;name&quot;, &quot;S1CompanyRep&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Rep Desc&quot;))
-(set: $s1VendComp to (dm: &quot;name&quot;, &quot;S1VendComp&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Desc&quot;))
+(set: $s1FaceCompRep to (dm: &quot;name&quot;, &quot;Atlas&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Rep Desc&quot;))
+(set: $s1VendComp to (dm: &quot;name&quot;, &quot;VendReady&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Desc&quot;))
 (set: $s1University to (dm: &quot;name&quot;, &quot;University of Fireloo&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 University Desc&quot;))
 
 &lt;!-- Names of people to talk to --&gt;
 (set: $s1FaceCompTech to (dm: &quot;name&quot;, &quot;Gerald Princeton&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Desc&quot;, &quot;short&quot;, &quot;Gerald&quot;))
-(set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Tech Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;TM&quot;))
+(set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Patricia Shu&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;Patricia&quot;))
 (set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Candice Pluto&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;Candice&quot;))
-(set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Market Junior&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;MJ&quot;))
+(set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Mark Etting Jr.&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;Mark&quot;))
 (set: $s1VendCompStan to (dm: &quot;name&quot;, &quot;Stan&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Stan Desc&quot;, &quot;short&quot;, &quot;Stan&quot;))
 (set: $s1Student to (dm: &quot;name&quot;, &quot;Ocean&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Student Desc&quot;, &quot;short&quot;, &quot;Ocean&quot;))
 }</tw-passagedata><tw-passagedata pid="17" name="S1 Face Comp Tech Manager Desc" tags="" position="1600,450" size="100,100">
@@ -199,7 +200,7 @@ You may review the conversation with a person after consulting with them.
 </tw-passagedata><tw-passagedata pid="22" name="S1 Vend Comp Market Jr Convo" tags="" position="1900,325" size="100,100">
 ### Talk to ($properNameLinkCustom: $s1VendCompMarketJr, &quot;short&quot;)
 
-“On the surface, it looks like using demographic information would help us sell more candy. But in a lot of countries and regions, using facial recognition technology in marketing applications is legally grey if not outright illegal. Even if it was legal, many customers would feel uncomfortable with facial recognition technology being in our vending machines, which might be enough to deter them from buying from them. Personally, I wouldn’t use a vending machine that had facial recognition technology built in.”
+“On the surface, it looks like using demographic information would help us sell more candy. But in a lot of countries and regions, using facial recognition technology in marketing applications is legally grey, if not outright illegal. Even if it was legal, many customers would feel uncomfortable with facial recognition technology being in our vending machines, which might be enough to deter them from buying from us. Personally, I wouldn’t use a vending machine that had facial recognition technology built in.”
 
 (display: &quot;Done Convo&quot;)
 (set: $s1_people_consulted to it + (dataset: &quot;s1VendCompMarketJr&quot;))
@@ -276,7 +277,9 @@ However, the use of facial recognition didn’t go unnoticed. A privacy commissi
 
 With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
 
-“It’s a shame that things turned out the way it did. We should be careful when giving advice the next time, especially if the advice that we give can run afoul of the law. We don’t want to be held liable for the advice that we give, do we?”
+“It’s a shame that things turned out the way it did. We should be careful when giving advice next time, especially if the advice that we give can run afoul of the law. We don’t want to be held liable for the advice that we give, do we?
+
+“Unfortunately, we have lost ($properNameLink: $s1FaceComp) as a client, and our reputation in the tech industry takes a hit. Given that this is your first project, I’d like to give you the benefit of the doubt. You have another chance to make things right. Of course, this will be reflected in your end-of-year evaluation.
 
 (display: &quot;S2 Intro&quot;)
 </tw-passagedata><tw-passagedata pid="34" name="S1 Modify Result" tags="" position="2700,250" size="100,100">
@@ -290,7 +293,9 @@ However, in the rush to create the modified facial detection software, ($properN
 
 With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
 
-“Well, it could have gone better. I can’t fault you too much for this reputation disaster. After all, it is mainly caused by ($properNameLink: $s1FaceComp)’s faulty programming and ($properNameLink: $s1VendComp)’s lack of disclosure regarding the usage of facial recognition technology in their machines. Still, from now on, we need to better evaluate the risks that our decisions can carry, especially towards the reputation of our client.”
+“Well, it could have gone better. I can’t fault you too much for this reputation disaster. After all, it is mainly caused by ($properNameLink: $s1FaceComp)’s faulty programming and ($properNameLink: $s1VendComp)’s lack of disclosure regarding the usage of facial recognition technology in their machines. Still, from now on, we need to better evaluate the risks that our decisions can carry, especially towards the reputation of our client.
+
+“Unfortunately, we have a rocky relationship with ($properNameLink: $s1FaceComp) now, which lowers our reputation in the tech industry. Your performance will be reflected in your end-of-year evaluation.
 
 (display: &quot;S2 Intro&quot;)
 </tw-passagedata><tw-passagedata pid="36" name="S2 Intro Deny" tags="" position="2850,400" size="100,100">
@@ -298,11 +303,13 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 
 With the conclusion of your consultation with ($properNameLink: $s1FaceComp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
 
-“It is a shame that our client isn’t able to secure a lucrative business deal at the moment, but there is nothing we can do about it now. I believe that you made the best decision that you could at the moment. Keep up with the good work.”
+“It is a shame that our client isn’t able to secure a lucrative business deal at the moment, but there is nothing we can do about it now. I believe that you made the best decision that you could at the moment.
+
+“We retain our business relationship with Facemap, and our reputation increases in the tech industry. Your excellent performance will be reflected in your end-of-year evaluation.
 
 (display: &quot;S2 Intro&quot;)
 </tw-passagedata><tw-passagedata pid="37" name="S2 Intro" tags="" position="800,900" size="100,100">(display: &quot;S2 Macro Setup&quot;)\
-“Anyway, for your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size (link-repeat: &quot;Internet of Things&quot;)[(open-url: &quot;https://en.wikipedia.org/wiki/Internet_of_things&quot;)] company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, ($properNameLink: $s2Comp) has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
+“For your next project, you’ll be working with ($properNameLink: $s2Comp), a mid-size (link-repeat: &quot;Internet of Things&quot;)[(open-url: &quot;https://en.wikipedia.org/wiki/Internet_of_things&quot;)] company that develops hardware, firmware, and software for their IoT devices. As a rapidly growing organization, ($properNameLink: $s2Comp) has been facing some challenges with workplace security and maintaining trade secrets. They want you to advise them on what technological solutions they can implement to keep a closer eye on their intellectual property and their employees.”
 
 [[Proceed with this project-&gt;S2 Explanation]]
 [[Refuse to take on this project because you think that any form of surveillance in the workplace is unethical and wrong-&gt;S2 Quit]]
@@ -319,9 +326,9 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 
 &lt;!-- Names of people to talk to --&gt;
 (set: $s2CEO to (dm: &quot;name&quot;, &quot;Ellen Ma&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 CEO Desc&quot;, &quot;short&quot;, &quot;Ellen&quot;))
-(set: $s2RemoteWorker to (dm: &quot;name&quot;, &quot;Remote Worker&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Remote Worker Desc&quot;, &quot;short&quot;, &quot;RW&quot;))
-(set: $s2OfficeWorker to (dm: &quot;name&quot;, &quot;Office Worker&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Office Worker Desc&quot;, &quot;short&quot;, &quot;OW&quot;))
-(set: $s2HardwareTester to (dm: &quot;name&quot;, &quot;Hardware Tester&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Hardware Tester Desc&quot;, &quot;short&quot;, &quot;HT&quot;))
+(set: $s2RemoteWorker to (dm: &quot;name&quot;, &quot;Jason Parr&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Remote Worker Desc&quot;, &quot;short&quot;, &quot;Jason&quot;))
+(set: $s2OfficeWorker to (dm: &quot;name&quot;, &quot;Bill Ding&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Office Worker Desc&quot;, &quot;short&quot;, &quot;Bill&quot;))
+(set: $s2HardwareTester to (dm: &quot;name&quot;, &quot;Alfred Unett&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Hardware Tester Desc&quot;, &quot;short&quot;, &quot;Alfred&quot;))
 (set: $s2Security to (dm: &quot;name&quot;, &quot;Security&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Security Desc&quot;, &quot;short&quot;, &quot;Security&quot;))
 (set: $s2PartnerManager to (dm: &quot;name&quot;, &quot;Partner Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Partner Manager Desc&quot;, &quot;short&quot;, &quot;PM&quot;))
 }</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1075,1025" size="100,100">
@@ -338,12 +345,12 @@ You meet with a representative from ($properNameLink: $s2Comp) to find out more 
 
 “($properNameLink: $s2Comp) started out small, where everyone worked on the hardware, firmware, and software for our IoT devices. We’ve grown since then, and those are now three distinct departments with their own sub-teams. We also have a small security team that handles internal reports of security issues, both physical and technological security.
 
-&quot;Unfortunately, we’ve had a few cases recently where prototype devices have gone missing and our design plans have been leaked to the public. We want to build a culture of trust, but we also can’t afford for this to keep happening. We’re considering installing security cameras in the office and giving the security team administrator privileges to be able to view employees’ activity on company computers and devices. We would like you to discuss with stakeholders to determine if these are good ideas.”
+&quot;Unfortunately, we’ve had a few incidents recently where prototype devices have gone missing and our design plans have been leaked to the public. We want to build a culture of trust, but we also can’t afford for this to keep happening. We’re considering installing security cameras in the office and giving the security team administrator privileges to be able to view employees’ activity on company computers and devices. We would like you to discuss with stakeholders to determine if these are good ideas.”
 
 [[Talk to the stakeholders-&gt;S2 Hub]]</tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
 ### Refuse Job
 
-You refuse to take on the project with company because you think that any form of surveillance in the workplace is unethical and wrong. ($properNameLink: $manager) points out that ($properNameLink: $consultingCompany) has security cameras in the office to prevent theft in the workplace, which themselves are a form of workplace surveillance. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, ($properNameLink: $manager) is forced to let go of several employees, and you lose your job.
+You refuse to take on the project with company because you think that any form of surveillance in the workplace is unethical and wrong. ($properNameLink: $manager) points out that ($properNameLink: $consultingCompany) has security cameras in the office to prevent theft in the workplace, which themselves are a form of workplace surveillance. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, the company is forced to let go of several employees, and you lose your job.
 
 =&gt;&lt;=
 ### GAME OVER
