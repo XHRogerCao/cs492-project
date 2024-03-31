@@ -90,6 +90,8 @@ They tell you the following:
 
 There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
 
+(if: ($s1_can_ask:))[You can talk to ($s1_people_left:) more (cond: ($s1_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
+
 You may review the conversation with a person after consulting with them.
 
 * ($properNameLink: $s1FaceCompTech), a machine learning developer at ($properNameLink: $s1FaceComp). (if: $s1_people_consulted contains &quot;s1FaceCompTech&quot;)[[[Review your conversation-&gt;S1 Face Comp Tech Convo]]] (else-if: ($s1_can_ask:)) [[[Talk to him-&gt;S1 Face Comp Tech Convo]]]
@@ -144,8 +146,11 @@ You may review the conversation with a person after consulting with them.
 (display: &quot;Macro Setup&quot;)
 (set: $s1_questions_limit to 3)
 (if: $s1_people_consulted is not a dataset)[(set: $s1_people_consulted to (ds:))]
+(set: $s1_people_left to (macro: [
+	(output-data: $s1_questions_limit - $s1_people_consulted&#39;s length)
+]))
 (set: $s1_can_ask to (macro: [
-	(output-data: $s1_people_consulted&#39;s length &lt; $s1_questions_limit)
+	(output-data: ($s1_people_left:) &gt; 0)
 ]))
 (set: $s1FaceComp to (dm: &quot;name&quot;, &quot;Facemap&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Desc&quot;))
 (set: $s1FaceCompRep to (dm: &quot;name&quot;, &quot;Atlas&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Rep Desc&quot;))
@@ -156,7 +161,7 @@ You may review the conversation with a person after consulting with them.
 (set: $s1FaceCompTech to (dm: &quot;name&quot;, &quot;Gerald Princeton&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Desc&quot;, &quot;short&quot;, &quot;Gerald&quot;))
 (set: $s1FaceCompTechManager to (dm: &quot;name&quot;, &quot;Patricia Shu&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Face Comp Tech Manager Desc&quot;, &quot;short&quot;, &quot;Patricia&quot;))
 (set: $s1VendCompMarketExec to (dm: &quot;name&quot;, &quot;Candice Pluto&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Exec Desc&quot;, &quot;short&quot;, &quot;Candice&quot;))
-(set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Mark Etting Jr.&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;Mark&quot;))
+(set: $s1VendCompMarketJr to (dm: &quot;name&quot;, &quot;Marcus Etting Jr.&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Market Jr Desc&quot;, &quot;short&quot;, &quot;Marcus&quot;))
 (set: $s1VendCompStan to (dm: &quot;name&quot;, &quot;Stan&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Vend Comp Stan Desc&quot;, &quot;short&quot;, &quot;Stan&quot;))
 (set: $s1Student to (dm: &quot;name&quot;, &quot;Ocean&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S1 Student Desc&quot;, &quot;short&quot;, &quot;Ocean&quot;))
 }</tw-passagedata><tw-passagedata pid="17" name="S1 Face Comp Tech Manager Desc" tags="" position="1600,450" size="100,100">
@@ -317,8 +322,11 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 (display: &quot;S1 Macro Setup&quot;)
 (set: $s2_questions_limit to 3)
 (if: $s2_people_consulted is not a dataset)[(set: $s2_people_consulted to (ds:))]
+(set: $s2_people_left to (macro: [
+	(output-data: $s2_questions_limit - $s2_people_consulted&#39;s length)
+]))
 (set: $s2_can_ask to (macro: [
-	(output-data: $s2_people_consulted&#39;s length &lt; $s2_questions_limit)
+	(output-data: ($s2_people_left:) &gt; 0)
 ]))
 
 (set: $s2Comp to (dm: &quot;name&quot;, &quot;Isaac-Ohm Technologies&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S2 Comp Desc&quot;))
@@ -359,6 +367,8 @@ You refuse to take on the project with company because you think that any form o
 ### Stakeholder Conversations
 
 There are a few people that you can consult. Due to time constraints, you can only talk to $s2_questions_limit people before making a decision.
+
+(if: ($s2_can_ask:))[You can talk to ($s2_people_left:) more (cond: ($s2_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
 
 You may review the conversation with a person after consulting with them.
 
