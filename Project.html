@@ -337,8 +337,8 @@ With the conclusion of your consultation with ($properNameLink: $s1FaceComp), yo
 (set: $s2RemoteWorker to (dm: &quot;name&quot;, &quot;Jason Parr&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Remote Worker Desc&quot;, &quot;short&quot;, &quot;Jason&quot;))
 (set: $s2OfficeWorker to (dm: &quot;name&quot;, &quot;Bill Ding&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Office Worker Desc&quot;, &quot;short&quot;, &quot;Bill&quot;))
 (set: $s2HardwareTester to (dm: &quot;name&quot;, &quot;Alfred Unett&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Hardware Tester Desc&quot;, &quot;short&quot;, &quot;Alfred&quot;))
-(set: $s2Security to (dm: &quot;name&quot;, &quot;Security&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Security Desc&quot;, &quot;short&quot;, &quot;Security&quot;))
-(set: $s2PartnerManager to (dm: &quot;name&quot;, &quot;Partner Manager&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Partner Manager Desc&quot;, &quot;short&quot;, &quot;PM&quot;))
+(set: $s2Security to (dm: &quot;name&quot;, &quot;Dina dos Santos&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Security Desc&quot;, &quot;short&quot;, &quot;Dina&quot;))
+(set: $s2PartnerManager to (dm: &quot;name&quot;, &quot;Ken Ban&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S2 Partner Manager Desc&quot;, &quot;short&quot;, &quot;Ken&quot;))
 }</tw-passagedata><tw-passagedata pid="39" name="S2 Comp Desc" tags="" position="1075,1025" size="100,100">
 ### (print: $s2Comp&#39;s name)
 
@@ -433,9 +433,9 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 (display: &quot;Done Convo&quot;)
 (set: $s2_people_consulted to it + (dataset: &quot;s2OfficeWorker&quot;))
 </tw-passagedata><tw-passagedata pid="49" name="S2 Office Worker Desc" tags="" position="1750,1150" size="100,100">
-### (print: $s2RemoteWorker&#39;s name)
+### (print: $s2OfficeWorker&#39;s name)
 
-($properName: $s2RemoteWorker) is a longtime firmware developer at ($properNameLink: $s2Comp), having been with the company since its first product release. They frequently work in the office but also keep several hardware prototypes at home for days when they work from home.
+($properName: $s2OfficeWorker) is a longtime firmware developer at ($properNameLink: $s2Comp), having been with the company since its first product release. They frequently work in the office but also keep several hardware prototypes at home for days when they work from home.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="50" name="S2 Hardware Tester Convo" tags="" position="1900,1025" size="100,100">
@@ -450,7 +450,7 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 </tw-passagedata><tw-passagedata pid="51" name="S2 Hardware Tester Desc" tags="" position="1900,1150" size="100,100">
 ### (print: $s2HardwareTester&#39;s name)
 
-($properName: $s2RemoteWorker) is a new hardware tester at ($properNameLink: $s2Comp), having just finished onboarding.
+($properName: $s2HardwareTester) is a new hardware tester at ($properNameLink: $s2Comp), having just finished onboarding.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="52" name="S2 Security Convo" tags="" position="2050,1025" size="100,100">
@@ -461,9 +461,9 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 (display: &quot;Done Convo&quot;)
 (set: $s2_people_consulted to it + (dataset: &quot;s2Security&quot;))
 </tw-passagedata><tw-passagedata pid="53" name="S2 Security Desc" tags="" position="2050,1150" size="100,100">
-### (print: $s2HardwareTester&#39;s name)
+### (print: $s2Security&#39;s name)
 
-($properName: $s2RemoteWorker) is a member of the security team at ($properNameLink: $s2Comp). They have previously worked in corporate workplace security.
+($properName: $s2Security) is a member of the security team at ($properNameLink: $s2Comp). They have previously worked in corporate workplace security.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="54" name="S2 Partner Manager Convo" tags="" position="2200,1025" size="100,100">
