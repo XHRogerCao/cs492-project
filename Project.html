@@ -123,7 +123,7 @@ You may review the conversation with a person after consulting with them.
     It is stylized according to the style of the proper name.
     --&gt;
 	(set: _name to _data&#39;s _id)
-    (set: _style to _data&#39;s style)
+    (set: _style to _data&#39;s style+(text-style:&quot;bold&quot;))
 	(output:) [_style[_name]]
 ]))
 (set: $properName to (macro: datamap-type _data, [
