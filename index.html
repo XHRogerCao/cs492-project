@@ -829,7 +829,8 @@ You meet back with ($properNameLink: $s3CompRep) for the next part of your assig
 “While it’s a bit chaotic at the beginning, ultimately we have decided to implement ATS. It is working successfully, and we’re on track for our hiring goals again.
 
 (display: &quot;S3b Explanation&quot;)
-</tw-passagedata><tw-passagedata pid="99" name="S3b Explanation" tags="" position="1150,2100" size="100,100">“The HR team is still quite busy, so we’re looking into additional ways to incorporate technological solutions to make their work more efficient. With the exception of internships, hiring for all positions at ($properNameLink: $s3CompRep) consists of multiple rounds of interviews to narrow down the candidate pool.
+</tw-passagedata><tw-passagedata pid="99" name="S3b Explanation" tags="" position="1150,2100" size="100,100">(display: &quot;S3b Macro Setup&quot;)\
+“The HR team is still quite busy, so we’re looking into additional ways to incorporate technological solutions to make their work more efficient. With the exception of internships, hiring for all positions at ($properNameLink: $s3Comp) consists of multiple rounds of interviews to narrow down the candidate pool.
 
 &quot;We’re considering a few options to automate the first round of interviews: one is an AI phone interviewer, which would take the form of a traditional phone interview but with an AI interviewer rather than a human. Another option is a video interview software, where candidates answer interview prompts in real-time and the video is later analyzed by an AI algorithm to find the best candidates. We would like you to discuss with stakeholders to determine the best path forward for first-round interviews.”
 
@@ -843,7 +844,77 @@ You meet back with ($properNameLink: $s3CompRep) for the next part of your assig
 (set: $s3b_can_ask to (macro: [
 	(output-data: ($s3b_people_left:) &gt; 0)
 ]))
-}</tw-passagedata><tw-passagedata pid="101" name="S3b Hub" tags="" position="1825,2100" size="100,100"></tw-passagedata></tw-storydata>
+}</tw-passagedata><tw-passagedata pid="101" name="S3b Hub" tags="" position="1825,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Stakeholder Conversations
+
+The stakeholders you previously had the option of discussing with also have different perspectives on automating first-round interviews for positions at ($properNameLink: $s3Comp). However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s3Comp) only gives you enough time to meet with $s3b_questions_limit of them.
+
+You can speak with people you spoke with previously regarding resume-scanning technology, people you haven’t spoken to before, or a combination of both.
+
+(if: ($s3b_can_ask:))[You can talk to ($s3b_people_left:) more (cond: ($s3b_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
+
+You may review the conversation with a person after consulting with them.
+
+* ($properNameLink: $s3HR), the head of Human Resources (HR) at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3HR&quot;)[[[Review your conversation-&gt;S3b HR Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b HR Convo]]]
+* ($properNameLink: $s3Recruiter), a recruiter at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3Recruiter&quot;)[[[Review your conversation-&gt;S3b Recruiter Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to her-&gt;S3b Recruiter Convo]]]
+* ($properNameLink: $s3NewHire), a recently hired developer at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3NewHire&quot;)[[[Review your conversation-&gt;S3b New Hire Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to her-&gt;S3b New Hire Convo]]]
+* ($properNameLink: $s3Transfer), a developer who joined ($properNameLink: $s3Comp) from a recent acquisition. (if: $s3b_people_consulted contains &quot;s3Transfer&quot;)[[[Review your conversation-&gt;S3b Transfer Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b Transfer Convo]]]
+* ($properNameLink: $s3Developer), the developer at ($properNameLink: $s3Comp) who developed a preliminary prototype of a resume-scanning AI tool trained on developers at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3Developer&quot;)[[[Review your conversation-&gt;S3b Developer Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b Developer Convo]]]
+* ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3b Cyber Sec Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to them-&gt;S3b Cyber Sec Convo]]]
+
+[[I&#39;m ready to make a decision-&gt;S3b Decide]]
+</tw-passagedata><tw-passagedata pid="102" name="S3b HR Convo" tags="" position="1450,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3HR, &quot;short&quot;)
+
+“It’s important to me that my team isn’t overworked, but the human aspect of interviewing is also important. Part of the goal of interviews is to assess the candidate’s ability to communicate and interact with other people. After all, in their actual job, they’re working with other people, not in one-way solitude or with AI coworkers. I’d be open to considering automated interviews if absolutely necessary, but I think it would be much more constructive just to hire a few more recruiters to reflect the growing organization.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3HR&quot;))
+</tw-passagedata><tw-passagedata pid="103" name="S3b Recruiter Convo" tags="" position="1600,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Recruiter, &quot;short&quot;)
+
+“As a recruiter, I like the personal aspect of talking to candidates. An interview is a two-way street—in addition to answering my questions, the candidate gets an opportunity to ask me questions, too. A one-way video interview takes away that opportunity entirely, and an AI interviewer wouldn’t be able to answer a lot of those questions, like the ones about my personal experience at ($properNameLink: $s3Comp). Overall, I feel uncomfortable with automating any stage of the interview process like this.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
+</tw-passagedata><tw-passagedata pid="104" name="S3b New Hire Convo" tags="" position="1750,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3NewHire, &quot;short&quot;)
+
+“I recently went through the job search process, so I’m familiar with one-way video interviews, although I never received a callback for any of the companies that I did those interviews for. I’m not sure if it’s because the algorithm’s optimized for communication styles different from my own, or because those companies sent out so many first-round interviews.
+
+&quot;In any case, just because I haven’t been successful with them doesn’t mean that they don’t work. The disadvantage is that the algorithms are another company’s proprietary work, so we don’t really have any way of verifying that they’re analyzing candidates based on ($properNameLink: $s3Comp)’ own criteria. I don’t have any experience with AI phone interviewers, but I’d imagine they could have the same issue.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3NewHire&quot;))
+</tw-passagedata><tw-passagedata pid="105" name="S3b Transfer Convo" tags="" position="1900,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Transfer, &quot;short&quot;)
+
+“I can see the pros and cons of both options. The AI phone interviewer is closer to a traditional interview, since it interacts with the candidate like a human interviewer would. This means that candidates who would do well in a regular interview would likely also do well in the AI interview, so the candidates that end up being selected are probably more consistent with what a human recruiter would decide. This is good if ($properNameLink: $s3Comp) is trying to keep hiring decisions the same.
+
+&quot;On the other hand, the video interview software isn’t conversational in the way that a traditional interview is. It’s more of a presentation style, and that’s a different skill. Presentation skills are also important for ($properNameLink: $s3Comp), so maybe it could be good for hiring people with more diverse skills. But it would be a big change in the way that hiring works, so no one knows if it’ll work well.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Transfer&quot;))
+</tw-passagedata><tw-passagedata pid="106" name="S3b Developer Convo" tags="" position="2050,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Developer, &quot;short&quot;)
+
+“Maybe I’m old-school, but the video interview method sounds odd. To me, a job interview should be a conversation, not just the candidate answering pre-determined questions. That being said, I haven’t done an interview in a long time.
+
+&quot;On the other hand, I think the AI phone interviewer could be very useful. AI speech generation isn’t perfect, but it’s good enough that it would feel like a conversation, and it could save the HR team a lot of time and money for first-round interviews.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Developer&quot;))
+</tw-passagedata><tw-passagedata pid="107" name="S3b Cyber Sec Convo" tags="" position="2200,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3CyberSec, &quot;short&quot;)
+
+“To me, the most important part of recruiting is that we’re able to specify the criteria we’re looking for in an ideal candidate. For any AI interviewing tool, unless we’ve built it ourselves, we can’t guarantee that we’re able to specify our criteria, or even if we could, that the algorithm would follow our specifications. It would be great if we had a proprietary interview AI, but it would take far too long to develop. Having human recruiters is still the best option that we have.
+
+&quot;Maybe the HR team needs more recruiters—after all, it hasn’t grown this whole time, while ($properNameLink: $s3Comp) has doubled in size. I’m sure there are HR folks from recent acquisitions who would be interested in joining the HR team.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3CyberSec&quot;))
+</tw-passagedata><tw-passagedata pid="108" name="S3b Decide" tags="" position="2400,2100" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
