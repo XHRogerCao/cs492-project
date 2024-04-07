@@ -790,8 +790,60 @@ In response to these teams’ concerns and recruiters’ suggestions, ($properNa
 
 With ATS, the HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow, and all teams are able to hire again.
 
-[[Move on to the next part of your assignment-&gt;S3b Explanation]]
-</tw-passagedata><tw-passagedata pid="94" name="S3b Explanation" tags="" position="2975,1450" size="100,100"></tw-passagedata><tw-passagedata pid="95" name="S3a ATS" tags="" position="2550,1500" size="100,100"></tw-passagedata><tw-passagedata pid="96" name="S3a AI" tags="" position="2550,1625" size="100,100"></tw-passagedata></tw-storydata>
+[[Move on to the next part of your assignment-&gt;S3b Explanation Subpar]]
+</tw-passagedata><tw-passagedata pid="94" name="S3a ATS" tags="" position="2550,1500" size="100,100">
+### Use ATS
+
+($properNameLink: $s3Comp) implements ATS in the first stage of recruiting, which shortlists the number of applicants to a few dozen per job posting, as opposed to over a hundred. The ATS-rejected candidates are those who don’t have the required skills for the job listed in their resume, which allows recruiters to pick interviewees from a much smaller candidate pool. Internal auditing shows that the ATS makes almost no mistakes. The HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow.
+
+[[Move on to the next part of your assignment-&gt;S3b Explanation Good]]
+</tw-passagedata><tw-passagedata pid="95" name="S3a AI" tags="" position="2550,1625" size="100,100">
+### Use ($properNameLinkCustom: $s3Developer, &quot;short&quot;)&#39;s AI
+
+Based on your recommendation, ($properNameLink: $s3Comp) makes ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool an official company priority. More ($properNameLink: $s3Comp) developers who have been with the company for at least two years provide their resumes to be used as training data, and applicants who consent have their resumes used as testing data. In the meantime, the HR team continues to review resumes manually; to keep up with the volume of applications, several teams, including the Cybersecurity unit, are forced to pause hiring.
+
+[[Continue...-&gt;S3a AI Result]]
+</tw-passagedata><tw-passagedata pid="96" name="S3a AI Result" tags="" position="2700,1625" size="100,100">
+### Unrepresentative AI
+
+When complete, ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool is tested on candidates for these deprioritized teams. However, as these teams, like the Cybersecurity team, are relatively new to ($properNameLink: $s3Comp), they are underrepresented in the training data. The AI tool continuously predicts candidates who more closely match the skills and experience of older teams at ($properNameLink: $s3Comp), rather than the ones formed from new acquisitions who seek different skillsets.
+
+As a growing organization, ($properNameLink: $s3Comp)’ new hires have diverse skills and experience not necessarily represented by its longtime employees. As such, ($properNameLinkCustom: $s3HR, &quot;short&quot;) determines that ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool is ultimately unsuitable for hiring. Instead, they implement ATS to shortlist qualified applicants for each position. ($properNameLinkCustom: $s3Developer, &quot;short&quot;) is disappointed that his AI tool was unable to be useful.
+
+With ATS, the HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow, and all teams are able to hire again.
+
+[[Move on to the next part of your assignment-&gt;S3b Explanation Subpar]]
+</tw-passagedata><tw-passagedata pid="97" name="S3b Explanation Good" tags="" position="2850,1425" size="100,100">
+### Second Assignment
+
+You meet back with ($properNameLink: $s3CompRep) for the next part of your assignment at ($properNameLink: $s3Comp).
+
+“ATS is working successfully, and we’re on track for our hiring goals again.
+
+(display: &quot;S3b Explanation&quot;)
+</tw-passagedata><tw-passagedata pid="98" name="S3b Explanation Subpar" tags="" position="2850,1575" size="100,100">
+### Second Assignment
+
+You meet back with ($properNameLink: $s3CompRep) for the next part of your assignment at ($properNameLink: $s3Comp).
+
+“While it’s a bit chaotic at the beginning, ultimately we have decided to implement ATS. It is working successfully, and we’re on track for our hiring goals again.
+
+(display: &quot;S3b Explanation&quot;)
+</tw-passagedata><tw-passagedata pid="99" name="S3b Explanation" tags="" position="1150,2100" size="100,100">“The HR team is still quite busy, so we’re looking into additional ways to incorporate technological solutions to make their work more efficient. With the exception of internships, hiring for all positions at ($properNameLink: $s3CompRep) consists of multiple rounds of interviews to narrow down the candidate pool.
+
+&quot;We’re considering a few options to automate the first round of interviews: one is an AI phone interviewer, which would take the form of a traditional phone interview but with an AI interviewer rather than a human. Another option is a video interview software, where candidates answer interview prompts in real-time and the video is later analyzed by an AI algorithm to find the best candidates. We would like you to discuss with stakeholders to determine the best path forward for first-round interviews.”
+
+[[Talk to the stakeholders-&gt;S3b Hub]]</tw-passagedata><tw-passagedata pid="100" name="S3b Macro Setup" tags="" position="800,2100" size="100,100">{
+(display: &quot;S3 Macro Setup&quot;)
+(set: $s3b_questions_limit to 3)
+(if: $s3b_people_consulted is not a dataset)[(set: $s3b_people_consulted to (ds:))]
+(set: $s3b_people_left to (macro: [
+	(output-data: $s3b_questions_limit - $s3b_people_consulted&#39;s length)
+]))
+(set: $s3b_can_ask to (macro: [
+	(output-data: ($s3b_people_left:) &gt; 0)
+]))
+}</tw-passagedata><tw-passagedata pid="101" name="S3b Hub" tags="" position="1825,2100" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
