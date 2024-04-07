@@ -11,7 +11,7 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
 <tw-storydata name="index" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
   /* Uncomment the following on production */
-  display: none;
+  /* display: none; */
 }
 
 tw-link {
@@ -663,12 +663,21 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3a Cyber Sec Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to them-&gt;S3a Cyber Sec Convo]]]
 
 [[I&#39;m ready to make a decision-&gt;S3 Decide]]
-</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1525" size="100,100"></tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1525" size="100,100">
+### Talk to ($properNameLinkCustom: $s3HR, &quot;short&quot;)
+
+“The HR team hasn’t grown since ($properNameLink: $s3Comp) started scaling up, and there aren’t plans to hire more recruiters in the near future. The team has always done a great job choosing and hiring the best candidates, but this is a team that used to review around fifty job applications a day. We now have thousands of applicants every day, with the same recruiting team. We need a drastically more efficient solution. ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool seems much more efficient than ATS because it’s personalized based on our recruiters’ past decisions. To me, it’s important to choose the most efficient solution.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3HR&quot;))
+</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
 ### (print: $s3CompRep&#39;s name)
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1650" size="100,100">
 ### (print: $s3HR&#39;s name)
+
+($properName: $s3HR) is the head of HR at ($properNameLink: $s3Comp).
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1650" size="100,100">
