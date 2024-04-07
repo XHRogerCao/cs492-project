@@ -844,6 +844,8 @@ You meet back with ($properNameLink: $s3CompRep) for the next part of your assig
 (set: $s3b_can_ask to (macro: [
 	(output-data: ($s3b_people_left:) &gt; 0)
 ]))
+
+(set: $s3VideoComp to (dm: &quot;name&quot;, &quot;SeeHire&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Video Comp Desc&quot;))
 }</tw-passagedata><tw-passagedata pid="101" name="S3b Hub" tags="" position="1825,2100" size="100,100">
 (display: &quot;S3b Macro Setup&quot;)\
 ### Stakeholder Conversations
@@ -923,7 +925,45 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 * [[“Use the video interview software. It’s accessible to candidates with a different skillset compared to traditional interviews.”-&gt;S3b Video]]
 * [[“Use the AI phone interviewer. It most closely matches a traditional interview with a human recruiter.”-&gt;S3b Phone]]
 * [[“Don’t use either. Human recruiters are more reliable for ($properNameLink: $s3Comp) when it comes to interviews, so the company should not automate first-round interviews.”-&gt;S3b Nothing]]
-* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="109" name="S3b Video" tags="" position="2550,1975" size="100,100"></tw-passagedata><tw-passagedata pid="110" name="S3b Phone" tags="" position="2550,2100" size="100,100"></tw-passagedata><tw-passagedata pid="111" name="S3b Nothing" tags="" position="2550,2225" size="100,100"></tw-passagedata></tw-storydata>
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="109" name="S3b Video" tags="" position="2550,1975" size="100,100">
+### Use Video Interview AI
+
+($properNameLink: $s3Comp) implements ($properNameLink: $s3VideoComp), a popular video interview software, for its first-round interviews, allowing the AI algorithm to decide the top candidates to move on to the next round of interviews with recruiters. This saves the HR team some time.
+
+[[Continue...-&gt;S3b Video Result]]
+</tw-passagedata><tw-passagedata pid="110" name="S3b Phone" tags="" position="2550,2100" size="100,100">
+### Use Phone Interview AI
+
+($properNameLink: $s3Comp) implements an AI phone interviewer for its first-round interviews, allowing the AI to decide the top candidates to move on to the next round of interviews with recruiters. This saves the HR team some time.
+
+[[Continue...-&gt;S3b Phone Result]]
+</tw-passagedata><tw-passagedata pid="111" name="S3b Nothing" tags="" position="2550,2225" size="100,100">
+### Do Nothing
+
+Based on your recommendation, ($properNameLink: $s3Comp) doesn’t implement any interview automation, since it has been so successful with human recruiters. With senior leadership and the HR team aligned on their prioritization of human recruiters, some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata><tw-passagedata pid="112" name="Review" tags="" position="2900,2100" size="100,100"></tw-passagedata><tw-passagedata pid="113" name="S3b Video Result" tags="" position="2700,1975" size="100,100">
+### Algorithm Bias
+
+However, they begin to notice in second-round interviews that not all the candidates have the technical skills that would previously have been required to make it past the first round. Instead, these candidates are outgoing and sociable.
+
+Following an external analysis by a news organization, ($properNameLink: $s3VideoComp) is found to heavily factor in how a candidate acts in the video interview in terms of their gestures, pose, tone, and other body language and speech patterns. This discriminates against people with disabilities, who may have many or all of the skills necessary for the job, but are penalized for their body language or speech patterns as a result of their disabilities. ($properNameLink: $s3VideoComp) is heavily criticized for this algorithmic bias.
+
+When this is revealed, ($properNameLink: $s3Comp) immediately stops using SeeHire and returns to using human recruiters for first-round interviews. Some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata><tw-passagedata pid="114" name="S3b Phone Result" tags="" position="2700,2100" size="100,100">
+### Interruption
+
+However, they begin to notice in second-round interviews that most of the candidates give much shorter answers than they would expect. Reading transcripts of first-round interviews showed a similar result, where the AI interviewer presented meaningful questions, but many of the answers were brief.
+
+Upon further investigation, the HR team discovers that the AI phone interviewer isn’t always able to discern when a candidate is finished answering a question, so it often cuts them off before they’re finished answering. This would be seen as rude behaviour from a human interviewer.
+
+($properNameLink: $s3Comp) prides itself on creating positive experiences for all candidates, so they stop using the AI phone interviewer and return to using human recruiters for first-round interviewers. Some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
