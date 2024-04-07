@@ -681,7 +681,18 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
-</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100">
+### Talk to ($properNameLinkCustom: $s3NewHire, &quot;short&quot;)
+
+“I applied for this position at ($properNameLink: $s3Comp) back when they had just started to open far more jobs, so I was surprised when I found out that their recruiters were actually reviewing all the resumes. I know some people here are excited about ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool, and although it sounds great at first, I know firsthand that it’s difficult to pull off.
+
+&quot;At my last employer, I was part of a large project that tried to develop a proprietary resume-scanning AI. This project lasted about two years and used resumes from tens of thousands of employees at the company, but the final result encoded many hidden biases that made it extremely unsuitable for hiring. In particular, that company had historically hired more men, and though we didn’t want the final product to be biased, it’s impossible to escape biased training data. The AI was heavily biased towards hiring men, and we ended up scrapping the project.
+
+&quot;($properNameLink: $s3Comp) is a much smaller organization and almost certainly has similar biases. ($properNameLinkCustom: $s3Developer, &quot;short&quot;) has put in a lot of work already, but it would take far more work to make his tool actually usable for hiring. Applicant Tracking System is much less work to implement and a much safer option.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3NewHire&quot;))
+</tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
 ### (print: $s3CompRep&#39;s name)
 
 (display: &quot;Return Button&quot;)
@@ -699,6 +710,8 @@ You may review the conversation with a person after consulting with them.
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1650" size="100,100">
 ### (print: $s3NewHire&#39;s name)
+
+($properName: $s3NewHire) is a newly-hired software developer at ($properNameLink: $s3Comp). She was hired a few months ago after leaving a similar position at a large tech company, where she contributed to a similar proprietary resume-scanning AI.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="88" name="S3 Transfer Desc" tags="" position="1900,1650" size="100,100">
