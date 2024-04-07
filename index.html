@@ -914,7 +914,16 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3b_people_consulted to it + (dataset: &quot;s3CyberSec&quot;))
-</tw-passagedata><tw-passagedata pid="108" name="S3b Decide" tags="" position="2400,2100" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="108" name="S3b Decide" tags="" position="2400,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s3Comp) to do?
+
+* [[“Use the video interview software. It’s accessible to candidates with a different skillset compared to traditional interviews.”-&gt;S3b Video]]
+* [[“Use the AI phone interviewer. It most closely matches a traditional interview with a human recruiter.”-&gt;S3b Phone]]
+* [[“Don’t use either. Human recruiters are more reliable for ($properNameLink: $s3Comp) when it comes to interviews, so the company should not automate first-round interviews.”-&gt;S3b Nothing]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="109" name="S3b Video" tags="" position="2550,1975" size="100,100"></tw-passagedata><tw-passagedata pid="110" name="S3b Phone" tags="" position="2550,2100" size="100,100"></tw-passagedata><tw-passagedata pid="111" name="S3b Nothing" tags="" position="2550,2225" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
