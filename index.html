@@ -73,6 +73,9 @@ You refuse to take on the project with ($properNameLink: $s1FaceComp) because yo
 
 =&gt;&lt;=
 ### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
 </tw-passagedata><tw-passagedata pid="6" name="S1 Explanation" tags="" position="1150,200" size="100,100">
 (display: &quot;S1 Macro Setup&quot;)\
 ### Job Accepted
@@ -385,6 +388,9 @@ You refuse to take on the project with company because you think that any form o
 
 =&gt;&lt;=
 ### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
 </tw-passagedata><tw-passagedata pid="42" name="S2 Hub" tags="" position="1825,900" size="100,100">
 (display: &quot;S2 Macro Setup&quot;)\
 ### Stakeholder Conversations
@@ -624,6 +630,9 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 
 =&gt;&lt;=
 ### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
 </tw-passagedata><tw-passagedata pid="74" name="S3 Macro Setup" tags="" position="800,1375" size="100,100">{
 (display: &quot;S2 Macro Setup&quot;)
 (set: $s3a_questions_limit to 3)
@@ -943,7 +952,15 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 Based on your recommendation, ($properNameLink: $s3Comp) doesn’t implement any interview automation, since it has been so successful with human recruiters. With senior leadership and the HR team aligned on their prioritization of human recruiters, some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
 
 [[Move on to the review-&gt;Review]]
-</tw-passagedata><tw-passagedata pid="112" name="Review" tags="" position="2900,2100" size="100,100"></tw-passagedata><tw-passagedata pid="113" name="S3b Video Result" tags="" position="2700,1975" size="100,100">
+</tw-passagedata><tw-passagedata pid="112" name="Review" tags="" position="3000,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Review
+
+(Temp) ($properNameLink: $manager) says some stuff to you and review your performance.
+
+(display: &quot;Restart Button&quot;)
+[[See Explanation of Scenarios-&gt;Explanations]]
+[[Credits]]</tw-passagedata><tw-passagedata pid="113" name="S3b Video Result" tags="" position="2700,1975" size="100,100">
 ### Algorithm Bias
 
 However, they begin to notice in second-round interviews that not all the candidates have the technical skills that would previously have been required to make it past the first round. Instead, these candidates are outgoing and sociable.
@@ -963,7 +980,7 @@ Upon further investigation, the HR team discovers that the AI phone interviewer 
 ($properNameLink: $s3Comp) prides itself on creating positive experiences for all candidates, so they stop using the AI phone interviewer and return to using human recruiters for first-round interviewers. Some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
 
 [[Move on to the review-&gt;Review]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="115" name="Restart Button" tags="" position="200,450" size="100,100">(link:&quot;Restart Game&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="116" name="Explanations" tags="" position="3000,2225" size="100,100"></tw-passagedata><tw-passagedata pid="117" name="Credits" tags="" position="3125,2225" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
