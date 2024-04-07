@@ -168,6 +168,11 @@ You may review the conversation with a person after consulting with them.
 ]))
 (set: $manager to (dm: &quot;name&quot;, &quot;Manfred Edgar&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))
 (set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))
+
+(if: $score_initialized is not true)[
+	(set: $score_initialized to true)
+	(set: $total_score to 0)
+]
 }</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="800,75" size="100,100">{
 (display: &quot;Macro Setup&quot;)
 (set: $s1_questions_limit to 3)
