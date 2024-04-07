@@ -111,7 +111,7 @@ You work here as a consultant, and it’s your job to talk to key stakeholders a
 (display: &quot;S1 Macro Setup&quot;)\
 ### Stakeholder Conversations
 
-There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
+There are many stakeholders with different perspectives on installing ($properNameLink: $s1FaceComp)’s facial recognition software on ($properNameLink: $s1VendComp)’s vending machines. However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s1FaceComp) only gives you enough time to meet with $s1_questions_limit of them.
 
 (if: ($s1_can_ask:))[You can talk to ($s1_people_left:) more (cond: ($s1_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
 
@@ -389,7 +389,7 @@ You refuse to take on the project with company because you think that any form o
 (display: &quot;S2 Macro Setup&quot;)\
 ### Stakeholder Conversations
 
-There are a few people that you can consult. Due to time constraints, you can only talk to $s2_questions_limit people before making a decision.
+There are many stakeholders with different perspectives on the proposed security measures at ($properNameLink: $s2Comp). However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s2Comp) only gives you enough time to meet with $s2_questions_limit of them.
 
 (if: ($s2_can_ask:))[You can talk to ($s2_people_left:) more (cond: ($s2_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
 
@@ -605,13 +605,15 @@ With the conclusion of your consultation with ($properNameLink: $s2Comp), you re
 (display: &quot;S3 Macro Setup&quot;)\
 ### Job Accepted
 
-You meet with name, a representative from WATitWorks, to find out more details about your assignment. They tell you the following:
+You meet with ($properNameLink: $s3CompRep), a representative from ($properNameLink: $s3Comp), to find out more details about your assignment. They tell you the following:
 
-“WATitWorks has been very successful in the past year, having made several acquisitions. As a result, we’ve opened up more positions and have been receiving many more job applications than usual.
+“($properNameLink: $s3Comp) has been very successful in the past year, having made several acquisitions. As a result, we’ve opened up more positions and have been receiving many more job applications than usual.
 
 &quot;Of course, it’s great that so many people are interested in joining us, and it points to our growing reputation in the tech industry. However, our recruiters have previously been manually reviewing all applicants’ resumes, which is no longer possible with the volume of applications we’re receiving.
 
-&quot;One of our longtime developers, Jeff, works on many special projects for internal operations, and he’s currently working on a prototype for a proprietary AI resume-scanning tool based on the resumes of existing developers at WATitWorks. We would like you to discuss with stakeholders to determine if implementing Jeff’s tool is a good idea, or if there are other options we could consider.”</tw-passagedata><tw-passagedata pid="73" name="S3 Quit" tags="" position="800,1525" size="100,100">
+&quot;One of our longtime developers, ($properNameLink: $s3Developer), works on many special projects for internal operations, and he’s currently working on a prototype for a proprietary AI resume-scanning tool based on the resumes of existing developers at ($properNameLink: $s3Comp). We would like you to discuss with stakeholders to determine if implementing ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s tool is a good idea, or if there are other options we could consider.”
+
+[[Talk to the stakeholders-&gt;S3a Hub]]</tw-passagedata><tw-passagedata pid="73" name="S3 Quit" tags="" position="800,1525" size="100,100">
 ### Refuse Job
 
 You refuse to take on the project with ($properNameLink: $s3Comp) because you think that technology should not be involved in any part of the hiring process. Manfred Edgar points out that ($properNameLink: $consultingCompany) uses ATS software for resume scanning and LinkedIn Recruiter for finding top candidates. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, the company is forced to let go of several employees, and you lose your job.
@@ -630,6 +632,7 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 ]))
 
 (set: $s3Comp to (dm: &quot;name&quot;, &quot;WATitWorks&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Desc&quot;))
+(set: $s3CompRep to (dm: &quot;name&quot;, &quot;Oli&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Rep Desc&quot;))
 
 &lt;!-- Names of people to talk to --&gt;
 (set: $s3HR to (dm: &quot;name&quot;, &quot;Hubert Mann&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 HR Desc&quot;, &quot;short&quot;, &quot;Hubert&quot;))
@@ -642,7 +645,7 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 ### (print: $s3Comp&#39;s name)
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="76" name="S3a Hub" tags="" position="1825,1400" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
