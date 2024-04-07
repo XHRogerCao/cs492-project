@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Project</title>
+<title>index</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Project.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Project" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play index.</tw-noscript></noscript></tw-story>
+<tw-storydata name="index" startnode="2" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="052CEB48-9C48-493A-8CBE-38CD60880AF8" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
   /* Uncomment the following on production */
-  display: none;
+  /* display: none; */
 }
 
 tw-link {
@@ -46,7 +46,7 @@ Your manager, ($properNameLink: $manager), invites you to his office and assigns
 
 Congratulations! I am pleased to offer you the position of Technical Consultant at ($properNameLink: $consultingCompany)! We are a software consulting organization bringing value to our clients. Your job consists of consulting on various tech projects for our clients. As an external consultant in each of these projects, your responsibility is to advise them on the best decisions to make. Each project also has a budgeted timeline; you must make your decision within the given constraints.
 
-If you accept the offer, please click the link below to start
+If you accept the offer, please click the link below to start.
 
 I look forward to working with you.
 
@@ -73,6 +73,9 @@ You refuse to take on the project with ($properNameLink: $s1FaceComp) because yo
 
 =&gt;&lt;=
 ### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
 </tw-passagedata><tw-passagedata pid="6" name="S1 Explanation" tags="" position="1150,200" size="100,100">
 (display: &quot;S1 Macro Setup&quot;)\
 ### Job Accepted
@@ -111,7 +114,7 @@ You work here as a consultant, and it’s your job to talk to key stakeholders a
 (display: &quot;S1 Macro Setup&quot;)\
 ### Stakeholder Conversations
 
-There are a few people that you can consult. Due to time constraints, you can only talk to $s1_questions_limit people before making a decision.
+There are many stakeholders with different perspectives on installing ($properNameLink: $s1FaceComp)’s facial recognition software on ($properNameLink: $s1VendComp)’s vending machines. However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s1FaceComp) only gives you enough time to meet with $s1_questions_limit of them.
 
 (if: ($s1_can_ask:))[You can talk to ($s1_people_left:) more (cond: ($s1_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
 
@@ -165,6 +168,11 @@ You may review the conversation with a person after consulting with them.
 ]))
 (set: $manager to (dm: &quot;name&quot;, &quot;Manfred Edgar&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;Manager Desc&quot;))
 (set: $consultingCompany to (dm: &quot;name&quot;, &quot;492 Consulting&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;Consulting Company Desc&quot;))
+
+(if: $score_initialized is not true)[
+	(set: $score_initialized to true)
+	(set: $total_score to 0)
+]
 }</tw-passagedata><tw-passagedata pid="16" name="S1 Macro Setup" tags="" position="800,75" size="100,100">{
 (display: &quot;Macro Setup&quot;)
 (set: $s1_questions_limit to 3)
@@ -385,11 +393,14 @@ You refuse to take on the project with company because you think that any form o
 
 =&gt;&lt;=
 ### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
 </tw-passagedata><tw-passagedata pid="42" name="S2 Hub" tags="" position="1825,900" size="100,100">
 (display: &quot;S2 Macro Setup&quot;)\
 ### Stakeholder Conversations
 
-There are a few people that you can consult. Due to time constraints, you can only talk to $s2_questions_limit people before making a decision.
+There are many stakeholders with different perspectives on the proposed security measures at ($properNameLink: $s2Comp). However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s2Comp) only gives you enough time to meet with $s2_questions_limit of them.
 
 (if: ($s2_can_ask:))[You can talk to ($s2_people_left:) more (cond: ($s2_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
 
@@ -513,12 +524,14 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 
 Based on your recommendation, ($properNameLink: $s2Comp) doesn’t implement any new security measures. Senior management reiterates that all prototypes and design plans are confidential and not to be shared outside the company.
 
-[[Continue...-&gt;S2 Nothing Result]]</tw-passagedata><tw-passagedata pid="58" name="S2 Cameras" tags="" position="2550,775" size="100,100">
+[[Continue...-&gt;S2 Nothing Result]]
+</tw-passagedata><tw-passagedata pid="58" name="S2 Cameras" tags="" position="2550,775" size="100,100">
 ### Install Cameras
 
 ($properNameLink: $s2Comp) installs security cameras in the office, a move received largely positively by employees. Though the cause of the original design leaks and missing prototypes is never discovered, prototypes stop going missing and there are no more leaks. Morale improves amongst the different departments and across the company.
 
-[[Continue...-&gt;S2 Cameras Result]]</tw-passagedata><tw-passagedata pid="59" name="S2 Computers" tags="" position="2550,900" size="100,100">
+[[Continue...-&gt;S2 Cameras Result]]
+</tw-passagedata><tw-passagedata pid="59" name="S2 Computers" tags="" position="2550,900" size="100,100">
 ### Implement Computer Surveillance
 
 ($properNameLink: $s2Comp) gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. This decision is mostly unpopular amongst members of the hardware, firmware, and software departments, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
@@ -535,42 +548,466 @@ Based on your recommendation, ($properNameLink: $s2Comp) doesn’t implement any
 
 ($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. Despite hesitancy from other executives, ($properNameLink: $s2CEO) announces at a company town hall that company will also be implementing a remote monitoring system to view remote workers’ workstations at home and installing productivity management software on all company computers, which will allow senior management to track how much work every team and every individual is getting done.
 
-[[Continue...-&gt;S2 More Result]]</tw-passagedata><tw-passagedata pid="62" name="S2 Nothing Result" tags="" position="2700,650" size="100,100">
+[[Continue...-&gt;S2 More Result]]
+</tw-passagedata><tw-passagedata pid="62" name="S2 Nothing Result" tags="" position="2700,650" size="100,100">
 ### Stolen Prototypes
 
 However, prototypes continue to go missing from the office and their designs continue to be publicly leaked. Some employees leave the company because they feel unsafe and ($properNameLink: $s2Comp) comes under public scrutiny for its inability to maintain proprietary information. ($properNameLink: $s2PartnerComp) takes a hit as car buyers choose its competitors and pressures ($properNameLink: $s2Comp) to implement new security measures. By the time ($properNameLink: $s2Comp) installs security cameras in the office, it has lost many of its employees and both ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp) have lost their competitive advantage in their respective industries.
 
-[[Move on to your next project-&gt;S3 Intro Nothing]]
-</tw-passagedata><tw-passagedata pid="63" name="S3 Intro Nothing" tags="" position="3000,650" size="100,100"></tw-passagedata><tw-passagedata pid="64" name="S2 Cameras Result" tags="" position="2700,775" size="100,100">
+[[Move on to your next project-&gt;S3 Intro Leaked]]
+</tw-passagedata><tw-passagedata pid="63" name="S2 Cameras Result" tags="" position="2700,775" size="100,100">
 ### Business is Booming
 
 ($properNameLink: $s2Comp) introduces its newest sensor to the market, and though its original design was previously leaked, the leak is largely forgotten and there is significant media attention on the new product, which has also been modified from its original design. At the same time, ($properNameLink: $s2PartnerComp) introduces a new car model that includes the new sensor, which is also highly successful.
 
-[[Move on to your next project-&gt;S3 Intro Cameras]]
-</tw-passagedata><tw-passagedata pid="65" name="S3 Intro Cameras" tags="" position="3000,775" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="S2 Computers Result" tags="" position="2700,900" size="100,100">
+[[Move on to your next project-&gt;S3 Intro Stopped]]
+</tw-passagedata><tw-passagedata pid="64" name="S2 Computers Result" tags="" position="2700,900" size="100,100">
 ### Cold Trails
 
 However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity.
 
-[[Continue...-&gt;S2 Computers Result 2]]</tw-passagedata><tw-passagedata pid="67" name="S2 Computers Result 2" tags="" position="2850,900" size="100,100">
+[[Continue...-&gt;S2 Computers Result 2]]
+</tw-passagedata><tw-passagedata pid="65" name="S2 Computers Result 2" tags="" position="2850,900" size="100,100">
 ### Leaked Info
 
 A few days before company introduces its newest sensor to the market, some of the finished devices disappear from the office, and a major tech media outlet publishes a comprehensive “preview” of the product that company never authorized. This leak is yet another blow to ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp), and there is growing resentment toward the security team and senior leadership for their inability to prevent further leaks. Unhappy with being constantly monitored with no results, several employees leave the company.
 
-[[Move on to your next project-&gt;S3 Intro Computers]]
-</tw-passagedata><tw-passagedata pid="68" name="S3 Intro Computers" tags="" position="3000,900" size="100,100"></tw-passagedata><tw-passagedata pid="69" name="S2 Both Result" tags="" position="2700,1025" size="100,100">
+[[Move on to your next project-&gt;S3 Intro Leaked]]
+</tw-passagedata><tw-passagedata pid="66" name="S2 Both Result" tags="" position="2700,1025" size="100,100">
 ### Cold Trails
 
 However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity as prototypes stop going missing and company successfully introduces its newest sensor to the market. As the security team continues not to find any evidence of security concerns, employees question why the administrator privileges were granted.
 
-[[Move on to your next project-&gt;S3 Intro Both]]
-</tw-passagedata><tw-passagedata pid="70" name="S3 Intro Both" tags="" position="3000,1025" size="100,100"></tw-passagedata><tw-passagedata pid="71" name="S2 More Result" tags="" position="2700,1150" size="100,100">
+[[Move on to your next project-&gt;S3 Intro Overreach]]
+</tw-passagedata><tw-passagedata pid="67" name="S2 More Result" tags="" position="2700,1150" size="100,100">
 ### Broken Trust
 
 This announcement is met with widespread criticism across the company and many employees—both remote and in-office workers—openly refuse to consent to these measures. Under Ontario law, implementing these surveillance methods without employee consent is illegal. Upon further consultation with ($properNameLink: $s2Comp)’s other executives, ($properNameLink: $s2CEO) realizes her mistake and tries to backtrack, but trust is already broken. Many employees leave ($properNameLink: $s2Comp), forcing a long delay in releasing its newest sensor to the market. By this point, both ($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp) have lost their competitive advantage in their respective industries.
 
-[[Move on to your next project-&gt;S3 Intro More]]
-</tw-passagedata><tw-passagedata pid="72" name="S3 Intro More" tags="" position="3000,1150" size="100,100"></tw-passagedata></tw-storydata>
+[[Move on to your next project-&gt;S3 Intro Overreach]]
+</tw-passagedata><tw-passagedata pid="68" name="S3 Intro Leaked" tags="" position="3000,725" size="100,100">
+### Final Job
+
+With the conclusion of your consultation with ($properNameLink: $s2Comp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“It’s quite unfortunate that we aren’t able to stop the prototypes from being leaked. I know that you are concerned with the privacy of the workers, but giving the workers too much privacy will just make them think that they can get away from crimes like this.
+
+“($properNameLink: $s2Comp) and ($properNameLink: $s2PartnerComp) have been hurt because of these prototype leaks, and that will significantly impact our relationship with them. Hopefully you can fare better in the next project. For now, your performance in this case will be considered in the year-end review.
+
+(display: &quot;S3 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="69" name="S3 Intro Stopped" tags="" position="3000,900" size="100,100">
+### Final Job
+
+With the conclusion of your consultation with ($properNameLink: $s2Comp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“Nicely done! You handled our last case pretty well. It’s a shame that we aren’t able to find the original leaker of the prototypes, but at least no more prototypes are being stolen. Your excellent performance will be considered in your year-end review.
+
+(display: &quot;S3 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="70" name="S3 Intro Overreach" tags="" position="3000,1075" size="100,100">
+### Final Job
+
+With the conclusion of your consultation with ($properNameLink: $s2Comp), you return to ($properNameLink: $consultingCompany), where ($properNameLink: $manager) briefs you of your performance.
+
+“At the very least, we stopped the prototype theft, so your approach definitely has its merits. However, your heavy-handed solution to prototype theft has led to a lot of growing resentment towards ($properNameLink: $s2Comp). We need to make sure that our solution isn’t too overreaching. Regardless, your performance in this case will be considered in the year-end review.”
+
+(display: &quot;S3 Intro&quot;)
+</tw-passagedata><tw-passagedata pid="71" name="S3 Intro" tags="" position="800,1500" size="100,100">(display: &quot;S3 Macro Setup&quot;)\
+“Now that you’ve completed your first two projects, here’s a larger one. You’ll be working with ($properNameLink: $s3Comp), a growing software development company that has recently made several acquisitions. With their recent financial success, they’re looking to scale up as an organization, and they want you to advise them on technological solutions to incorporate into their hiring process.”
+
+[[Proceed with this project-&gt;S3a Explanation]]
+[[Refuse to take on this project because you think that technology should not be involved in any part of the hiring process-&gt;S3 Quit]]
+</tw-passagedata><tw-passagedata pid="72" name="S3a Explanation" tags="" position="1150,1500" size="100,100">
+(display: &quot;S3 Macro Setup&quot;)\
+### Job Accepted
+
+You meet with ($properNameLink: $s3CompRep), a representative from ($properNameLink: $s3Comp), to find out more details about your assignment. They tell you the following:
+
+“($properNameLink: $s3Comp) has been very successful in the past year, having made several acquisitions. As a result, we’ve opened up more positions and have been receiving many more job applications than usual.
+
+&quot;Of course, it’s great that so many people are interested in joining us, and it points to our growing reputation in the tech industry. However, our recruiters have previously been manually reviewing all applicants’ resumes, which is no longer possible with the volume of applications we’re receiving.
+
+&quot;One of our longtime developers, ($properNameLink: $s3Developer), works on many special projects for internal operations, and he’s currently working on a prototype for a proprietary AI resume-scanning tool based on the resumes of existing developers at ($properNameLink: $s3Comp). We would like you to discuss with stakeholders to determine if implementing ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s tool is a good idea, or if there are other options we could consider.”
+
+[[Talk to the stakeholders-&gt;S3a Hub]]</tw-passagedata><tw-passagedata pid="73" name="S3 Quit" tags="" position="800,1625" size="100,100">
+### Refuse Job
+
+You refuse to take on the project with ($properNameLink: $s3Comp) because you think that technology should not be involved in any part of the hiring process. Manfred Edgar points out that ($properNameLink: $consultingCompany) uses ATS software for resume scanning and LinkedIn Recruiter for finding top candidates. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, the company is forced to let go of several employees, and you lose your job.
+
+=&gt;&lt;=
+### GAME OVER
+
+&lt;==
+(display: &quot;Restart Button&quot;)
+</tw-passagedata><tw-passagedata pid="74" name="S3 Macro Setup" tags="" position="800,1375" size="100,100">{
+(display: &quot;S2 Macro Setup&quot;)
+(set: $s3a_questions_limit to 3)
+(if: $s3a_people_consulted is not a dataset)[(set: $s3a_people_consulted to (ds:))]
+(set: $s3a_people_left to (macro: [
+	(output-data: $s3a_questions_limit - $s3a_people_consulted&#39;s length)
+]))
+(set: $s3a_can_ask to (macro: [
+	(output-data: ($s3a_people_left:) &gt; 0)
+]))
+
+(set: $s3Comp to (dm: &quot;name&quot;, &quot;WATitWorks&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Desc&quot;))
+(set: $s3CompRep to (dm: &quot;name&quot;, &quot;Cooper M. Ploy&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Comp Rep Desc&quot;, &quot;short&quot;, &quot;Cooper&quot;))
+(set: $s3AcquiredComp to (dm: &quot;name&quot;, &quot;CyberSecOps&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Acquired Comp Desc&quot;))
+
+&lt;!-- Names of people to talk to --&gt;
+(set: $s3HR to (dm: &quot;name&quot;, &quot;Hubert Mann&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 HR Desc&quot;, &quot;short&quot;, &quot;Hubert&quot;))
+(set: $s3Recruiter to (dm: &quot;name&quot;, &quot;Im Hye-Rin&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Recruiter Desc&quot;, &quot;short&quot;, &quot;Hye-Rin&quot;))
+(set: $s3NewHire to (dm: &quot;name&quot;, &quot;Ruby Riel&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 New Hire Desc&quot;, &quot;short&quot;, &quot;Ruby&quot;))
+(set: $s3Transfer to (dm: &quot;name&quot;, &quot;Gordon Lang&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Transfer Desc&quot;, &quot;short&quot;, &quot;Gordon&quot;))
+(set: $s3Developer to (dm: &quot;name&quot;, &quot;Jeff Bathos&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Developer Desc&quot;, &quot;short&quot;, &quot;Jeff&quot;))
+(set: $s3CyberSec to (dm: &quot;name&quot;, &quot;Archie Lin&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Cyber Sec Desc&quot;, &quot;short&quot;, &quot;Archie&quot;))
+}</tw-passagedata><tw-passagedata pid="75" name="S3 Comp Desc" tags="" position="1075,1625" size="100,100">
+### (print: $s3Comp&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="76" name="S3a Hub" tags="" position="1825,1500" size="100,100">
+(display: &quot;S3 Macro Setup&quot;)\
+### Stakeholder Conversations
+
+There are many stakeholders with different perspectives on using technological solutions for scanning prospective hires’ resumes at ($properNameLink: $s3Comp). However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s3Comp) only gives you enough time to meet with $s3a_questions_limit of them.
+
+(if: ($s3a_can_ask:))[You can talk to ($s3a_people_left:) more (cond: ($s3a_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
+
+You may review the conversation with a person after consulting with them.
+
+* ($properNameLink: $s3HR), the head of Human Resources (HR) at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3HR&quot;)[[[Review your conversation-&gt;S3a HR Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to him-&gt;S3a HR Convo]]]
+* ($properNameLink: $s3Recruiter), a recruiter at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3Recruiter&quot;)[[[Review your conversation-&gt;S3a Recruiter Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to her-&gt;S3a Recruiter Convo]]]
+* ($properNameLink: $s3NewHire), a recently hired developer at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3NewHire&quot;)[[[Review your conversation-&gt;S3a New Hire Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to her-&gt;S3a New Hire Convo]]]
+* ($properNameLink: $s3Transfer), a developer who joined ($properNameLink: $s3Comp) from a recent acquisition. (if: $s3a_people_consulted contains &quot;s3Transfer&quot;)[[[Review your conversation-&gt;S3a Transfer Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to him-&gt;S3a Transfer Convo]]]
+* ($properNameLink: $s3Developer), the developer at ($properNameLink: $s3Comp) who developed a preliminary prototype of a resume-scanning AI tool trained on developers at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3Developer&quot;)[[[Review your conversation-&gt;S3a Developer Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to him-&gt;S3a Developer Convo]]]
+* ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3a Cyber Sec Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to them-&gt;S3a Cyber Sec Convo]]]
+
+[[I&#39;m ready to make a decision-&gt;S3a Decide]]
+</tw-passagedata><tw-passagedata pid="77" name="S3a Decide" tags="" position="2400,1500" size="100,100">
+(display: &quot;S3 Macro Setup&quot;)\
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s3Comp) to do?
+
+* [[“Don’t use resume-scanning technology in hiring. ($properNameLink: $s3Comp) has succeeded thus far with human recruiters reviewing all resumes individually.”-&gt;S3a Nothing]]
+* [[“Use Applicant Tracking System (ATS) to scan job applicants’ resumes for key skills to narrow down a list of qualified applicants for recruiters to select top candidates from.”-&gt;S3a ATS]]
+* [[“Use ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s resume-scanning AI to scan job applicants’ resumes to find top applicants whose traits and experience closely align with those of existing developers at ($properNameLink: $s3Comp).”-&gt;S3a AI]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3HR, &quot;short&quot;)
+
+“The HR team hasn’t grown since ($properNameLink: $s3Comp) started scaling up, and there aren’t plans to hire more recruiters in the near future. The team has always done a great job choosing and hiring the best candidates, but this is a team that used to review around fifty job applications a day. We now have thousands of applicants every day, with the same recruiting team. We need a drastically more efficient solution. ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool seems much more efficient than ATS because it’s personalized based on our recruiters’ past decisions. To me, it’s important to choose the most efficient solution.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3HR&quot;))
+</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Recruiter, &quot;short&quot;)
+
+“Anyone in HR will tell you that we’re flooded right now. We have hundreds of applications each for dozens of positions every day, and it’s simply not possible to handle all of this work without some kind of technological help. Almost all tech companies these days use Applicant Tracking System. It matches keywords from a job description with keywords in a resume, such as a list of programming languages.
+
+&quot;This is really helpful for recruiters because there’s often a bare minimum list of skill requirements for a position, yet many applicants don’t meet those requirements. ATS can help to filter out unqualified applicants, and I or another recruiter can find top candidates to interview from the rest. This is the industry standard, so I like this approach best.
+
+&quot;As much as I appreciate ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s work, I’m worried that his AI tool doesn’t quite meet the needs of a recruiter. Often, when a team is hiring, they’re not necessarily looking for someone who matches the experience of anyone else at the company in general, and sometimes they’re actually looking for someone completely different from who we’ve hired in the past. So a tool that finds top candidates based on how well they match the skills and experience of existing developers at ($properNameLink: $s3Comp) isn’t exactly what I’m looking for.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
+</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Transfer, &quot;short&quot;)
+
+“I’ve had a great experience at ($properNameLink: $s3Comp) so far, and I’m grateful for the opportunity. Although almost everyone else here comes from a traditional tech background, I have a business background and only transitioned to software development recently. The recent acquisitions have made them very open to hiring people from non-traditional backgrounds like me. If a resume-scanning tool filters out candidates without traditional tech backgrounds, it would put people like me at a big disadvantage in hiring.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3Transfer&quot;))
+</tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3NewHire, &quot;short&quot;)
+
+“I applied for this position at ($properNameLink: $s3Comp) back when they had just started to open far more jobs, so I was surprised when I found out that their recruiters were actually reviewing all the resumes. I know some people here are excited about ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool, and although it sounds great at first, I know firsthand that it’s difficult to pull off.
+
+&quot;At my last employer, I was part of a large project that tried to develop a proprietary resume-scanning AI. This project lasted about two years and used resumes from tens of thousands of employees at the company, but the final result encoded many hidden biases that made it extremely unsuitable for hiring. In particular, that company had historically hired more men, and though we didn’t want the final product to be biased, it’s impossible to escape biased training data. The AI was heavily biased towards hiring men, and we ended up scrapping the project.
+
+&quot;($properNameLink: $s3Comp) is a much smaller organization and almost certainly has similar biases. ($properNameLinkCustom: $s3Developer, &quot;short&quot;) has put in a lot of work already, but it would take far more work to make his tool actually usable for hiring. Applicant Tracking System is much less work to implement and a much safer option.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3NewHire&quot;))
+</tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Developer, &quot;short&quot;)
+
+“I heard that ($properNameLinkCustom: $s3CompRep, &quot;short&quot;) name told you a bit about what I do. I have a prototype of an AI tool that rates candidates’ resumes based on how likely they are to succeed at ($properNameLink: $s3Comp), with success being measured based on developers who have stayed at ($properNameLink: $s3Comp) for at least two years.
+
+&quot;I’ve reached out to developers here for their resumes, and used them as training data only with their explicit consent. This is just a preliminary prototype, so it won’t be usable until it’s been thoroughly tested. If we can get HR to approve of moving forward with this prototype, then we can use new applicants’ resumes as testing data, again, only if they consent. It’ll take a bit more work to turn this into a working product, but I can definitely do it. If I can get this tool working, it can save the recruiters so much time.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3Developer&quot;))
+</tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1625" size="100,100">
+### Talk to ($properNameLinkCustom: $s3CyberSec, &quot;short&quot;)
+
+“($properNameLink: $s3Comp) has consistently shown its dedication to cybersecurity. They’ve retained the whole ($properNameLink: $s3AcquiredComp) team and have begun hiring to further expand the Cybersecurity unit. As I’ve been leading this unit, senior leadership and HR have been incredibly supportive of our needs. In particular, our unit has different technical and organizational needs compared to the other existing teams at ($properNameLink: $s3Comp).
+
+&quot;I’ve been working closely with the HR team to prepare to hire the best candidates to expand the Cybersecurity unit, and I understand they need a technological alternative to manually reading thousands of resumes. ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool sounds like it has potential, but since it’s trained on existing ($properNameLink: $s3Comp) developers’ resumes, I don’t think it will suit the needs of the Cybersecurity unit. Applicant Tracking System is the industry standard, so I would trust that more. Being able to specify what skills we’re looking for and having the software sort candidates that way seems useful for everyone involved.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3CyberSec&quot;))
+</tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1625" size="100,100">
+### (print: $s3CompRep&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1750" size="100,100">
+### (print: $s3HR&#39;s name)
+
+($properName: $s3HR) is the head of HR at ($properNameLink: $s3Comp). He has been employed by the company long before they started scaling up.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1750" size="100,100">
+### (print: $s3Recruiter&#39;s name)
+
+($properName: $s3Recruiter) is a recruiter at ($properNameLink: $s3Comp). Like the rest of the HR team at ($properNameLink: $s3Comp), she has been with the company since before it started scaling up.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1750" size="100,100">
+### (print: $s3NewHire&#39;s name)
+
+($properName: $s3NewHire) is a newly-hired software developer at ($properNameLink: $s3Comp). She was hired a few months ago after leaving a similar position at a large tech company, where she contributed to a similar proprietary resume-scanning AI.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="88" name="S3 Transfer Desc" tags="" position="1900,1750" size="100,100">
+### (print: $s3Transfer&#39;s name)
+
+($properName: $s3Transfer) is a software developer at ($properNameLink: $s3Comp), having joined from the recent acquisition of ($properNameLink: $s3AcquiredComp).
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="89" name="S3 Developer Desc" tags="" position="2050,1750" size="100,100">
+### (print: $s3Developer&#39;s name)
+
+($properName: $s3Developer) is a longtime software developer at ($properNameLink: $s3Comp). With many connections within the company, he often works on special projects. In particular, he has begun developing a proprietary resume-scanning AI trained on the resumes of developers at ($properNameLink: $s3Comp).
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="90" name="S3 Cyber Sec Desc" tags="" position="2200,1750" size="100,100">
+### (print: $s3CyberSec&#39;s name)
+
+($properName: $s3CyberSec) is the VP of Cybersecurity at ($properNameLink: $s3Comp). They were previously the CEO of ($properNameLink: $s3AcquiredComp), which was recently acquired by ($properNameLink: $s3Comp) and converted into the new Cybersecurity unit.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="91" name="S3 Acquired Comp Desc" tags="" position="1075,1750" size="100,100">
+### (print: $s3AcquiredComp&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="92" name="S3a Nothing" tags="" position="2550,1375" size="100,100">
+### Do Nothing
+
+Based on your recommendation, ($properNameLink: $s3Comp) doesn’t implement any technological solution, since it has been successful with human resume review.
+
+[[Continue...-&gt;S3a Nothing Result]]
+</tw-passagedata><tw-passagedata pid="93" name="S3a Nothing Result" tags="" position="2700,1375" size="100,100">
+### Overwhelmed!
+
+However, the HR team is unable to keep up with the volume of applications, so several teams, including the Cybersecurity unit, are forced to pause hiring. The deprioritized teams struggle as a result, with no timeline for reprioritization.
+
+In response to these teams’ concerns and recruiters’ suggestions, ($properNameLinkCustom: $s3HR, &quot;short&quot;) implements Applicant Tracking System to shortlist qualified applicants for each position. ($properNameLinkCustom: $s3Developer, &quot;short&quot;) is slightly disappointed that his AI tool was not considered.
+
+With ATS, the HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow, and all teams are able to hire again.
+
+[[Move on to the next part of your assignment-&gt;S3b Explanation Subpar]]
+</tw-passagedata><tw-passagedata pid="94" name="S3a ATS" tags="" position="2550,1500" size="100,100">
+### Use ATS
+
+($properNameLink: $s3Comp) implements ATS in the first stage of recruiting, which shortlists the number of applicants to a few dozen per job posting, as opposed to over a hundred. The ATS-rejected candidates are those who don’t have the required skills for the job listed in their resume, which allows recruiters to pick interviewees from a much smaller candidate pool. Internal auditing shows that the ATS makes almost no mistakes. The HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow.
+
+[[Move on to the next part of your assignment-&gt;S3b Explanation Good]]
+</tw-passagedata><tw-passagedata pid="95" name="S3a AI" tags="" position="2550,1625" size="100,100">
+### Use ($properNameLinkCustom: $s3Developer, &quot;short&quot;)&#39;s AI
+
+Based on your recommendation, ($properNameLink: $s3Comp) makes ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool an official company priority. More ($properNameLink: $s3Comp) developers who have been with the company for at least two years provide their resumes to be used as training data, and applicants who consent have their resumes used as testing data. In the meantime, the HR team continues to review resumes manually; to keep up with the volume of applications, several teams, including the Cybersecurity unit, are forced to pause hiring.
+
+[[Continue...-&gt;S3a AI Result]]
+</tw-passagedata><tw-passagedata pid="96" name="S3a AI Result" tags="" position="2700,1625" size="100,100">
+### Unrepresentative AI
+
+When complete, ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool is tested on candidates for these deprioritized teams. However, as these teams, like the Cybersecurity team, are relatively new to ($properNameLink: $s3Comp), they are underrepresented in the training data. The AI tool continuously predicts candidates who more closely match the skills and experience of older teams at ($properNameLink: $s3Comp), rather than the ones formed from new acquisitions who seek different skillsets.
+
+As a growing organization, ($properNameLink: $s3Comp)’ new hires have diverse skills and experience not necessarily represented by its longtime employees. As such, ($properNameLinkCustom: $s3HR, &quot;short&quot;) determines that ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool is ultimately unsuitable for hiring. Instead, they implement ATS to shortlist qualified applicants for each position. ($properNameLinkCustom: $s3Developer, &quot;short&quot;) is disappointed that his AI tool was unable to be useful.
+
+With ATS, the HR team is still busier than they’re used to, but they’re able to keep up with the volume of job applications as ($properNameLink: $s3Comp) continues to grow, and all teams are able to hire again.
+
+[[Move on to the next part of your assignment-&gt;S3b Explanation Subpar]]
+</tw-passagedata><tw-passagedata pid="97" name="S3b Explanation Good" tags="" position="2850,1425" size="100,100">
+### Second Assignment
+
+You meet back with ($properNameLink: $s3CompRep) for the next part of your assignment at ($properNameLink: $s3Comp).
+
+“ATS is working successfully, and we’re on track for our hiring goals again.
+
+(display: &quot;S3b Explanation&quot;)
+</tw-passagedata><tw-passagedata pid="98" name="S3b Explanation Subpar" tags="" position="2850,1575" size="100,100">
+### Second Assignment
+
+You meet back with ($properNameLink: $s3CompRep) for the next part of your assignment at ($properNameLink: $s3Comp).
+
+“While it’s a bit chaotic at the beginning, ultimately we have decided to implement ATS. It is working successfully, and we’re on track for our hiring goals again.
+
+(display: &quot;S3b Explanation&quot;)
+</tw-passagedata><tw-passagedata pid="99" name="S3b Explanation" tags="" position="1150,2100" size="100,100">(display: &quot;S3b Macro Setup&quot;)\
+“The HR team is still quite busy, so we’re looking into additional ways to incorporate technological solutions to make their work more efficient. With the exception of internships, hiring for all positions at ($properNameLink: $s3Comp) consists of multiple rounds of interviews to narrow down the candidate pool.
+
+&quot;We’re considering a few options to automate the first round of interviews: one is an AI phone interviewer, which would take the form of a traditional phone interview but with an AI interviewer rather than a human. Another option is a video interview software, where candidates answer interview prompts in real-time and the video is later analyzed by an AI algorithm to find the best candidates. We would like you to discuss with stakeholders to determine the best path forward for first-round interviews.”
+
+[[Talk to the stakeholders-&gt;S3b Hub]]</tw-passagedata><tw-passagedata pid="100" name="S3b Macro Setup" tags="" position="800,2100" size="100,100">{
+(display: &quot;S3 Macro Setup&quot;)
+(set: $s3b_questions_limit to 3)
+(if: $s3b_people_consulted is not a dataset)[(set: $s3b_people_consulted to (ds:))]
+(set: $s3b_people_left to (macro: [
+	(output-data: $s3b_questions_limit - $s3b_people_consulted&#39;s length)
+]))
+(set: $s3b_can_ask to (macro: [
+	(output-data: ($s3b_people_left:) &gt; 0)
+]))
+
+(set: $s3VideoComp to (dm: &quot;name&quot;, &quot;SeeHire&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Video Comp Desc&quot;))
+}</tw-passagedata><tw-passagedata pid="101" name="S3b Hub" tags="" position="1825,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Stakeholder Conversations
+
+The stakeholders you previously had the option of discussing with also have different perspectives on automating first-round interviews for positions at ($properNameLink: $s3Comp). However, ($properNameLink: $consultingCompany)’s contract with ($properNameLink: $s3Comp) only gives you enough time to meet with $s3b_questions_limit of them.
+
+You can speak with people you spoke with previously regarding resume-scanning technology, people you haven’t spoken to before, or a combination of both.
+
+(if: ($s3b_can_ask:))[You can talk to ($s3b_people_left:) more (cond: ($s3b_people_left:)&gt;1, &quot;people&quot;, &quot;person&quot;).](else:)[You can talk to no more people.]
+
+You may review the conversation with a person after consulting with them.
+
+* ($properNameLink: $s3HR), the head of Human Resources (HR) at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3HR&quot;)[[[Review your conversation-&gt;S3b HR Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b HR Convo]]]
+* ($properNameLink: $s3Recruiter), a recruiter at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3Recruiter&quot;)[[[Review your conversation-&gt;S3b Recruiter Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to her-&gt;S3b Recruiter Convo]]]
+* ($properNameLink: $s3NewHire), a recently hired developer at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3NewHire&quot;)[[[Review your conversation-&gt;S3b New Hire Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to her-&gt;S3b New Hire Convo]]]
+* ($properNameLink: $s3Transfer), a developer who joined ($properNameLink: $s3Comp) from a recent acquisition. (if: $s3b_people_consulted contains &quot;s3Transfer&quot;)[[[Review your conversation-&gt;S3b Transfer Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b Transfer Convo]]]
+* ($properNameLink: $s3Developer), the developer at ($properNameLink: $s3Comp) who developed a preliminary prototype of a resume-scanning AI tool trained on developers at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3Developer&quot;)[[[Review your conversation-&gt;S3b Developer Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to him-&gt;S3b Developer Convo]]]
+* ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3b_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3b Cyber Sec Convo]]] (else-if: ($s3b_can_ask:)) [[[Talk to them-&gt;S3b Cyber Sec Convo]]]
+
+[[I&#39;m ready to make a decision-&gt;S3b Decide]]
+</tw-passagedata><tw-passagedata pid="102" name="S3b HR Convo" tags="" position="1450,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3HR, &quot;short&quot;)
+
+“It’s important to me that my team isn’t overworked, but the human aspect of interviewing is also important. Part of the goal of interviews is to assess the candidate’s ability to communicate and interact with other people. After all, in their actual job, they’re working with other people, not in one-way solitude or with AI coworkers. I’d be open to considering automated interviews if absolutely necessary, but I think it would be much more constructive just to hire a few more recruiters to reflect the growing organization.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3HR&quot;))
+</tw-passagedata><tw-passagedata pid="103" name="S3b Recruiter Convo" tags="" position="1600,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Recruiter, &quot;short&quot;)
+
+“As a recruiter, I like the personal aspect of talking to candidates. An interview is a two-way street—in addition to answering my questions, the candidate gets an opportunity to ask me questions, too. A one-way video interview takes away that opportunity entirely, and an AI interviewer wouldn’t be able to answer a lot of those questions, like the ones about my personal experience at ($properNameLink: $s3Comp). Overall, I feel uncomfortable with automating any stage of the interview process like this.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
+</tw-passagedata><tw-passagedata pid="104" name="S3b New Hire Convo" tags="" position="1750,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3NewHire, &quot;short&quot;)
+
+“I recently went through the job search process, so I’m familiar with one-way video interviews, although I never received a callback for any of the companies that I did those interviews for. I’m not sure if it’s because the algorithm’s optimized for communication styles different from my own, or because those companies sent out so many first-round interviews.
+
+&quot;In any case, just because I haven’t been successful with them doesn’t mean that they don’t work. The disadvantage is that the algorithms are another company’s proprietary work, so we don’t really have any way of verifying that they’re analyzing candidates based on ($properNameLink: $s3Comp)’ own criteria. I don’t have any experience with AI phone interviewers, but I’d imagine they could have the same issue.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3NewHire&quot;))
+</tw-passagedata><tw-passagedata pid="105" name="S3b Transfer Convo" tags="" position="1900,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Transfer, &quot;short&quot;)
+
+“I can see the pros and cons of both options. The AI phone interviewer is closer to a traditional interview, since it interacts with the candidate like a human interviewer would. This means that candidates who would do well in a regular interview would likely also do well in the AI interview, so the candidates that end up being selected are probably more consistent with what a human recruiter would decide. This is good if ($properNameLink: $s3Comp) is trying to keep hiring decisions the same.
+
+&quot;On the other hand, the video interview software isn’t conversational in the way that a traditional interview is. It’s more of a presentation style, and that’s a different skill. Presentation skills are also important for ($properNameLink: $s3Comp), so maybe it could be good for hiring people with more diverse skills. But it would be a big change in the way that hiring works, so no one knows if it’ll work well.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Transfer&quot;))
+</tw-passagedata><tw-passagedata pid="106" name="S3b Developer Convo" tags="" position="2050,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Developer, &quot;short&quot;)
+
+“Maybe I’m old-school, but the video interview method sounds odd. To me, a job interview should be a conversation, not just the candidate answering pre-determined questions. That being said, I haven’t done an interview in a long time.
+
+&quot;On the other hand, I think the AI phone interviewer could be very useful. AI speech generation isn’t perfect, but it’s good enough that it would feel like a conversation, and it could save the HR team a lot of time and money for first-round interviews.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3Developer&quot;))
+</tw-passagedata><tw-passagedata pid="107" name="S3b Cyber Sec Convo" tags="" position="2200,2225" size="100,100">
+### Talk to ($properNameLinkCustom: $s3CyberSec, &quot;short&quot;)
+
+“To me, the most important part of recruiting is that we’re able to specify the criteria we’re looking for in an ideal candidate. For any AI interviewing tool, unless we’ve built it ourselves, we can’t guarantee that we’re able to specify our criteria, or even if we could, that the algorithm would follow our specifications. It would be great if we had a proprietary interview AI, but it would take far too long to develop. Having human recruiters is still the best option that we have.
+
+&quot;Maybe the HR team needs more recruiters—after all, it hasn’t grown this whole time, while ($properNameLink: $s3Comp) has doubled in size. I’m sure there are HR folks from recent acquisitions who would be interested in joining the HR team.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3b_people_consulted to it + (dataset: &quot;s3CyberSec&quot;))
+</tw-passagedata><tw-passagedata pid="108" name="S3b Decide" tags="" position="2400,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s3Comp) to do?
+
+* [[“Use the video interview software. It’s accessible to candidates with a different skillset compared to traditional interviews.”-&gt;S3b Video]]
+* [[“Use the AI phone interviewer. It most closely matches a traditional interview with a human recruiter.”-&gt;S3b Phone]]
+* [[“Don’t use either. Human recruiters are more reliable for ($properNameLink: $s3Comp) when it comes to interviews, so the company should not automate first-round interviews.”-&gt;S3b Nothing]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="109" name="S3b Video" tags="" position="2550,1975" size="100,100">
+### Use Video Interview AI
+
+($properNameLink: $s3Comp) implements ($properNameLink: $s3VideoComp), a popular video interview software, for its first-round interviews, allowing the AI algorithm to decide the top candidates to move on to the next round of interviews with recruiters. This saves the HR team some time.
+
+[[Continue...-&gt;S3b Video Result]]
+</tw-passagedata><tw-passagedata pid="110" name="S3b Phone" tags="" position="2550,2100" size="100,100">
+### Use Phone Interview AI
+
+($properNameLink: $s3Comp) implements an AI phone interviewer for its first-round interviews, allowing the AI to decide the top candidates to move on to the next round of interviews with recruiters. This saves the HR team some time.
+
+[[Continue...-&gt;S3b Phone Result]]
+</tw-passagedata><tw-passagedata pid="111" name="S3b Nothing" tags="" position="2550,2225" size="100,100">
+### Do Nothing
+
+Based on your recommendation, ($properNameLink: $s3Comp) doesn’t implement any interview automation, since it has been so successful with human recruiters. With senior leadership and the HR team aligned on their prioritization of human recruiters, some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata><tw-passagedata pid="112" name="Review" tags="" position="3000,2100" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Review
+
+(Temp) ($properNameLink: $manager) says some stuff to you and review your performance.
+
+(display: &quot;Restart Button&quot;)
+[[See Explanation of Scenarios-&gt;Explanations]]
+[[Credits]]
+</tw-passagedata><tw-passagedata pid="113" name="S3b Video Result" tags="" position="2700,1975" size="100,100">
+### Algorithm Bias
+
+However, they begin to notice in second-round interviews that not all the candidates have the technical skills that would previously have been required to make it past the first round. Instead, these candidates are outgoing and sociable.
+
+Following an external analysis by a news organization, ($properNameLink: $s3VideoComp) is found to heavily factor in how a candidate acts in the video interview in terms of their gestures, pose, tone, and other body language and speech patterns. This discriminates against people with disabilities, who may have many or all of the skills necessary for the job, but are penalized for their body language or speech patterns as a result of their disabilities. ($properNameLink: $s3VideoComp) is heavily criticized for this algorithmic bias.
+
+When this is revealed, ($properNameLink: $s3Comp) immediately stops using SeeHire and returns to using human recruiters for first-round interviews. Some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata><tw-passagedata pid="114" name="S3b Phone Result" tags="" position="2700,2100" size="100,100">
+### Interruption
+
+However, they begin to notice in second-round interviews that most of the candidates give much shorter answers than they would expect. Reading transcripts of first-round interviews showed a similar result, where the AI interviewer presented meaningful questions, but many of the answers were brief.
+
+Upon further investigation, the HR team discovers that the AI phone interviewer isn’t always able to discern when a candidate is finished answering a question, so it often cuts them off before they’re finished answering. This would be seen as rude behaviour from a human interviewer.
+
+($properNameLink: $s3Comp) prides itself on creating positive experiences for all candidates, so they stop using the AI phone interviewer and return to using human recruiters for first-round interviewers. Some HR members of recent acquisitions join the ($properNameLink: $s3Comp) HR team, allowing them to distribute the work appropriately. With a more diverse range of recruiters, ($properNameLink: $s3Comp) continues to succeed and grow as an organization.
+
+[[Move on to the review-&gt;Review]]
+</tw-passagedata><tw-passagedata pid="115" name="Restart Button" tags="" position="200,450" size="100,100">(link:&quot;Restart Game&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="116" name="Explanations" tags="" position="3000,2225" size="100,100">
+(display: &quot;S3b Macro Setup&quot;)\
+### Explanations of Game Scenarios
+
+The ($properNameLink: $s1FaceComp) scenario is based on the incident of (link-repeat: &quot;M&amp;M Vending Machines&quot;)[(open-url: &quot;https://www.cbc.ca/news/business/vending-machine-facial-analysis-invenda-waterloo-1.7126196&quot;)] at the University of Waterloo. ($properNameLink: $s1FaceCompTechManager) discusses the difference between facial recognition and facial detection, a distinction made by Invenda. Choosing to modify the software leads to consequences similar to those that Invenda faced, while choosing to use the software as-is leads to a privacy commissioner investigation, like in the (link-repeat: &quot;Cadillac Fairview facial recognition incident&quot;)[(open-url: &quot;https://www.cbc.ca/news/politics/cadillac-fairview-5-million-images-1.5781735&quot;)].
+
+The ($properNameLink: $s2Comp) scenario is based on the rise of (link-repeat: &quot;workplace surveillance in Canada&quot;)[(open-url: &quot;https://onlinelibrary.wiley.com/doi/full/10.1111/cars.12448&quot;)]. ($properNameLink: $s2OfficeWorker) alludes to (link-repeat: &quot;Google and Facebook surveillance culture&quot;)[(open-url: &quot;https://www.theguardian.com/technology/2018/mar/16/silicon-valley-internal-work-spying-surveillance-leakers&quot;)] in discussing paranoia and toxic work culture at other companies, and ($properNameLink: $s2HardwareTester) alludes to (link-repeat: &quot;Amazon’s haptic wristbands&quot;)[(open-url: &quot;https://www.theguardian.com/technology/2018/jan/31/amazon-warehouse-wristband-tracking&quot;)] and (link-repeat: &quot;Three Square Market’s voluntary microchipping&quot;)[(open-url: &quot;https://www.cnbc.com/2017/08/11/three-square-market-ceo-explains-its-employee-microchip-implant.html&quot;)]. Choosing to implement additional surveillance measures results in employees refusing to consent, which makes these measures illegal under (link-repeat: &quot;Ontario employee electronic monitoring law&quot;)[(open-url: &quot;https://www.ontario.ca/document/your-guide-employment-standards-act-0/written-policy-electronic-monitoring-employees&quot;)].
+
+The first part of the ($properNameLink: $s3Comp) scenario is based on (link-repeat: &quot;Amazon’s biased resume-scanning AI&quot;)[(open-url: &quot;https://www.reuters.com/article/idUSKCN1MK0AG/&quot;)] and (link-repeat: &quot;ATS&quot;)[(open-url: &quot;https://www.shrm.org/topics-tools/news/hr-magazine/applicant-tracking-system-hurting-recruiting-efforts&quot;)]. ($properNameLink: $s3NewHire) specifically discusses the development and outcome of Amazon’s resume-scanning AI, while ($properNameLink: $s3HR), ($properNameLink: $s3Recruiter), and ($properNameLink: $s3CyberSec) discuss the existing use cases of ATS. Choosing to implement ($properNameLink: $s3Developer)’s AI tool leads to outcomes similar to those at Amazon. Regardless of the decision, ($properNameLink: $s3Comp) ultimately ends up implementing ATS, which reflects the ubiquity of ATS amongst tech companies today.
+
+The second part of the ($properNameLink: $s3Comp) scenario is based on (link-repeat: &quot;HireVue&quot;)[(open-url: &quot;https://www.brookings.edu/articles/for-some-employment-algorithms-disability-discrimination-by-default/&quot;)] and (link-repeat: &quot;AI phone interviewers&quot;)[(open-url: &quot;https://www.theguardian.com/technology/2024/mar/06/ai-interviews-job-applications&quot;)]. Choosing to implement the video interview software leads to consequences similar to those that HireVue faced, while choosing to implement AI phone interviewers leads to reactions experienced by AI phone interviewees.
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="117" name="Credits" tags="" position="3125,2225" size="100,100">
+### Credits
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="118" name="S3 Video Comp Desc" tags="" position="1075,2225" size="100,100">
+### (print: $s3VideoComp&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
