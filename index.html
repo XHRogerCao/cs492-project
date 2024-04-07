@@ -596,12 +596,12 @@ With the conclusion of your consultation with ($properNameLink: $s2Comp), you re
 “At the very least, we stopped the prototype theft, so your approach definitely has its merits. However, your heavy-handed solution to prototype theft has led to a lot of growing resentment towards ($properNameLink: $s2Comp). We need to make sure that our solution isn’t too overreaching. Regardless, your performance in this case will be considered in the year-end review.”
 
 (display: &quot;S3 Intro&quot;)
-</tw-passagedata><tw-passagedata pid="71" name="S3 Intro" tags="" position="800,1400" size="100,100">(display: &quot;S3 Macro Setup&quot;)\
+</tw-passagedata><tw-passagedata pid="71" name="S3 Intro" tags="" position="800,1500" size="100,100">(display: &quot;S3 Macro Setup&quot;)\
 “Now that you’ve completed your first two projects, here’s a larger one. You’ll be working with ($properNameLink: $s3Comp), a growing software development company that has recently made several acquisitions. With their recent financial success, they’re looking to scale up as an organization, and they want you to advise them on technological solutions to incorporate into their hiring process.”
 
 [[Proceed with this project-&gt;S3 Explanation]]
 [[Refuse to take on this project because you think that technology should not be involved in any part of the hiring process-&gt;S3 Quit]]
-</tw-passagedata><tw-passagedata pid="72" name="S3 Explanation" tags="" position="1150,1400" size="100,100">
+</tw-passagedata><tw-passagedata pid="72" name="S3 Explanation" tags="" position="1150,1500" size="100,100">
 (display: &quot;S3 Macro Setup&quot;)\
 ### Job Accepted
 
@@ -613,14 +613,14 @@ You meet with ($properNameLink: $s3CompRep), a representative from ($properNameL
 
 &quot;One of our longtime developers, ($properNameLink: $s3Developer), works on many special projects for internal operations, and he’s currently working on a prototype for a proprietary AI resume-scanning tool based on the resumes of existing developers at ($properNameLink: $s3Comp). We would like you to discuss with stakeholders to determine if implementing ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s tool is a good idea, or if there are other options we could consider.”
 
-[[Talk to the stakeholders-&gt;S3a Hub]]</tw-passagedata><tw-passagedata pid="73" name="S3 Quit" tags="" position="800,1525" size="100,100">
+[[Talk to the stakeholders-&gt;S3a Hub]]</tw-passagedata><tw-passagedata pid="73" name="S3 Quit" tags="" position="800,1625" size="100,100">
 ### Refuse Job
 
 You refuse to take on the project with ($properNameLink: $s3Comp) because you think that technology should not be involved in any part of the hiring process. Manfred Edgar points out that ($properNameLink: $consultingCompany) uses ATS software for resume scanning and LinkedIn Recruiter for finding top candidates. Also, as you are the only available consultant at the moment, ($properNameLink: $manager) is unable to fulfill their commitment to company, and ($properNameLink: $consultingCompany) quickly loses its reputation in the tech industry. As a result, the company is forced to let go of several employees, and you lose your job.
 
 =&gt;&lt;=
 ### GAME OVER
-</tw-passagedata><tw-passagedata pid="74" name="S3 Macro Setup" tags="" position="800,1275" size="100,100">{
+</tw-passagedata><tw-passagedata pid="74" name="S3 Macro Setup" tags="" position="800,1375" size="100,100">{
 (display: &quot;S2 Macro Setup&quot;)
 (set: $s3a_questions_limit to 3)
 (if: $s3a_people_consulted is not a dataset)[(set: $s3a_people_consulted to (ds:))]
@@ -642,11 +642,11 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 (set: $s3Transfer to (dm: &quot;name&quot;, &quot;Gordon Lang&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Transfer Desc&quot;, &quot;short&quot;, &quot;Gordon&quot;))
 (set: $s3Developer to (dm: &quot;name&quot;, &quot;Jeff Bathos&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Developer Desc&quot;, &quot;short&quot;, &quot;Jeff&quot;))
 (set: $s3CyberSec to (dm: &quot;name&quot;, &quot;Archie Lin&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 Cyber Sec Desc&quot;, &quot;short&quot;, &quot;Archie&quot;))
-}</tw-passagedata><tw-passagedata pid="75" name="S3 Comp Desc" tags="" position="1075,1525" size="100,100">
+}</tw-passagedata><tw-passagedata pid="75" name="S3 Comp Desc" tags="" position="1075,1625" size="100,100">
 ### (print: $s3Comp&#39;s name)
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="76" name="S3a Hub" tags="" position="1825,1400" size="100,100">
+</tw-passagedata><tw-passagedata pid="76" name="S3a Hub" tags="" position="1825,1500" size="100,100">
 (display: &quot;S3 Macro Setup&quot;)\
 ### Stakeholder Conversations
 
@@ -664,14 +664,23 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3a Cyber Sec Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to them-&gt;S3a Cyber Sec Convo]]]
 
 [[I&#39;m ready to make a decision-&gt;S3 Decide]]
-</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1500" size="100,100">
+(display: &quot;S3 Macro Setup&quot;)\
+### Make a decision
+
+Based on what you heard from stakeholders, what do you tell ($properNameLink: $s3Comp) to do?
+
+* [[“Don’t use resume-scanning technology in hiring. ($properNameLink: $s3Comp) has succeeded thus far with human recruiters reviewing all resumes individually.”-&gt;S3 Nothing]]
+* [[“Use Applicant Tracking System (ATS) to scan job applicants’ resumes for key skills to narrow down a list of qualified applicants for recruiters to select top candidates from.”-&gt;S3 ATS]]
+* [[“Use ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s resume-scanning AI to scan job applicants’ resumes to find top applicants whose traits and experience closely align with those of existing developers at ($properNameLink: $s3Comp).”-&gt;S3 AI]]
+* (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3HR, &quot;short&quot;)
 
 “The HR team hasn’t grown since ($properNameLink: $s3Comp) started scaling up, and there aren’t plans to hire more recruiters in the near future. The team has always done a great job choosing and hiring the best candidates, but this is a team that used to review around fifty job applications a day. We now have thousands of applicants every day, with the same recruiting team. We need a drastically more efficient solution. ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool seems much more efficient than ATS because it’s personalized based on our recruiters’ past decisions. To me, it’s important to choose the most efficient solution.”
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3HR&quot;))
-</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3Recruiter, &quot;short&quot;)
 
 “Anyone in HR will tell you that we’re flooded right now. We have hundreds of applications each for dozens of positions every day, and it’s simply not possible to handle all of this work without some kind of technological help. Almost all tech companies these days use Applicant Tracking System. It matches keywords from a job description with keywords in a resume, such as a list of programming languages.
@@ -682,14 +691,14 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
-</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3Transfer, &quot;short&quot;)
 
 “I’ve had a great experience at ($properNameLink: $s3Comp) so far, and I’m grateful for the opportunity. Although almost everyone else here comes from a traditional tech background, I have a business background and only transitioned to software development recently. The recent acquisitions have made them very open to hiring people from non-traditional backgrounds like me. If a resume-scanning tool filters out candidates without traditional tech backgrounds, it would put people like me at a big disadvantage in hiring.”
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3Transfer&quot;))
-</tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3NewHire, &quot;short&quot;)
 
 “I applied for this position at ($properNameLink: $s3Comp) back when they had just started to open far more jobs, so I was surprised when I found out that their recruiters were actually reviewing all the resumes. I know some people here are excited about ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s AI tool, and although it sounds great at first, I know firsthand that it’s difficult to pull off.
@@ -700,7 +709,7 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3NewHire&quot;))
-</tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3Developer, &quot;short&quot;)
 
 “I heard that ($properNameLinkCustom: $s3CompRep, &quot;short&quot;) name told you a bit about what I do. I have a prototype of an AI tool that rates candidates’ resumes based on how likely they are to succeed at ($properNameLink: $s3Comp), with success being measured based on developers who have stayed at ($properNameLink: $s3Comp) for at least two years.
@@ -709,7 +718,7 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3Developer&quot;))
-</tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1625" size="100,100">
 ### Talk to ($properNameLinkCustom: $s3CyberSec, &quot;short&quot;)
 
 “($properNameLink: $s3Comp) has consistently shown its dedication to cybersecurity. They’ve retained the whole ($properNameLink: $s3AcquiredComp) team and have begun hiring to further expand the Cybersecurity unit. As I’ve been leading this unit, senior leadership and HR have been incredibly supportive of our needs. In particular, our unit has different technical and organizational needs compared to the other existing teams at ($properNameLink: $s3Comp).
@@ -718,51 +727,51 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3CyberSec&quot;))
-</tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1625" size="100,100">
 ### (print: $s3CompRep&#39;s name)
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1750" size="100,100">
 ### (print: $s3HR&#39;s name)
 
 ($properName: $s3HR) is the head of HR at ($properNameLink: $s3Comp). He has been employed by the company long before they started scaling up.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1750" size="100,100">
 ### (print: $s3Recruiter&#39;s name)
 
 ($properName: $s3Recruiter) is a recruiter at ($properNameLink: $s3Comp). Like the rest of the HR team at ($properNameLink: $s3Comp), she has been with the company since before it started scaling up.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1750" size="100,100">
 ### (print: $s3NewHire&#39;s name)
 
 ($properName: $s3NewHire) is a newly-hired software developer at ($properNameLink: $s3Comp). She was hired a few months ago after leaving a similar position at a large tech company, where she contributed to a similar proprietary resume-scanning AI.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="88" name="S3 Transfer Desc" tags="" position="1900,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="88" name="S3 Transfer Desc" tags="" position="1900,1750" size="100,100">
 ### (print: $s3Transfer&#39;s name)
 
 ($properName: $s3Transfer) is a software developer at ($properNameLink: $s3Comp), having joined from the recent acquisition of ($properNameLink: $s3AcquiredComp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="89" name="S3 Developer Desc" tags="" position="2050,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="89" name="S3 Developer Desc" tags="" position="2050,1750" size="100,100">
 ### (print: $s3Developer&#39;s name)
 
 ($properName: $s3Developer) is a longtime software developer at ($properNameLink: $s3Comp). With many connections within the company, he often works on special projects. In particular, he has begun developing a proprietary resume-scanning AI trained on the resumes of developers at ($properNameLink: $s3Comp).
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="90" name="S3 Cyber Sec Desc" tags="" position="2200,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="90" name="S3 Cyber Sec Desc" tags="" position="2200,1750" size="100,100">
 ### (print: $s3CyberSec&#39;s name)
 
 ($properName: $s3CyberSec) is the VP of Cybersecurity at ($properNameLink: $s3Comp). They were previously the CEO of ($properNameLink: $s3AcquiredComp), which was recently acquired by ($properNameLink: $s3Comp) and converted into the new Cybersecurity unit.
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata><tw-passagedata pid="91" name="S3 Acquired Comp Desc" tags="" position="1075,1650" size="100,100">
+</tw-passagedata><tw-passagedata pid="91" name="S3 Acquired Comp Desc" tags="" position="1075,1750" size="100,100">
 ### (print: $s3AcquiredComp&#39;s name)
 
 (display: &quot;Return Button&quot;)
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="92" name="S3 Nothing" tags="" position="2550,1375" size="100,100"></tw-passagedata><tw-passagedata pid="93" name="S3 ATS" tags="" position="2550,1500" size="100,100"></tw-passagedata><tw-passagedata pid="94" name="S3 AI" tags="" position="2550,1625" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
