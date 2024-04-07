@@ -384,7 +384,7 @@ You meet with a representative from ($properNameLink: $s2Comp) to find out more 
 
 “($properNameLink: $s2Comp) started out small, where everyone worked on the hardware, firmware, and software for our IoT devices. We’ve grown since then, and those are now three distinct departments with their own sub-teams. We also have a small security team that handles internal reports of security issues, both physical and technological security.
 
-&quot;Unfortunately, we’ve had a few incidents recently where prototype devices have gone missing and our design plans have been leaked to the public. We want to build a culture of trust, but we also can’t afford for this to keep happening. We’re considering installing security cameras in the office and giving the security team administrator privileges to be able to view employees’ activity on company computers and devices. We would like you to discuss with stakeholders to determine if these are good ideas.”
+&quot;Unfortunately, we’ve had a few incidents recently where prototype devices have gone missing and our design plans have been leaked to the public. We want to build a culture of trust, but we also can’t afford for this to keep happening. For one, we’re considering installing security cameras in the office. We’re also considering giving the security team administrator privileges to be able to view employees’ activity on company computers and devices, along with an AI activity monitor to alert them to possible suspicious behaviour. We would like you to discuss with stakeholders to determine if these are good ideas.”
 
 [[Talk to the stakeholders-&gt;S2 Hub]]</tw-passagedata><tw-passagedata pid="41" name="S2 Quit" tags="" position="800,1025" size="100,100">
 ### Refuse Job
@@ -421,9 +421,9 @@ You may review the conversation with a person after consulting with them.
 Based on what you heard from stakeholders, what do you tell ($properNameLink: $s2Comp) to do?
 
 * [[“Don’t implement any new security measures. Employees wouldn’t sabotage their employer like some are suggesting, and adding any new security measures just increases surveillance and causes paranoia.”-&gt;S2 Nothing]]
-* [[“Install security cameras in the office, but don’t give the security team administrator privileges to view employees’ activity on company computers and devices. Security cameras in the office will give employees a sense of safety and deter theft without being overly intrusive.”-&gt;S2 Cameras]]
-* [[“Give the security team administrator privileges to view employees’ activity on company computers and devices, but don’t install security cameras in the office. This way, the security team can investigate all remote and in-office employees equally to find the source of the leaks.”-&gt;S2 Computers]]
-* [[“Implement both security measures under consideration. Install security cameras in the office and give the security team administrator privileges. This makes it easier to connect the dots between how and why devices are going missing and who’s leaking information, if this happens again in the future.”-&gt;S2 Both]]
+* [[“Install security cameras in the office, but don’t implement the AI flagging tool or give the security team the ability to view employees’ activity on company computers and devices. Security cameras in the office will give employees a sense of safety and deter theft without being overly intrusive.”-&gt;S2 Cameras]]
+* [[“Give the security team the AI flagging tool and administrator privileges to view employees’ activity on company computers and devices, but don’t install security cameras in the office. This way, the security team can investigate remote and in-office employees equally to find the source of the leaks.”-&gt;S2 Computers]]
+* [[“Implement both security measures under consideration. Install security cameras in the office and give the security team administrator privileges and the AI flagging tool. This makes it easier to connect the dots between how and why devices are going missing and who’s leaking information, if this happens again in the future.”-&gt;S2 Both]]
 * [[“Implement both security measures under consideration, and more. Remote workers have the same responsibilities as in-office ones, so install cameras at their home workstations. Also use employees’ computer activity data as performance metrics to track which teams and/or individuals are performing well or poorly.”-&gt;S2 More]]
 * (link-undo:&quot;I need more time to decide&quot;, &quot;Can&#39;t Return&quot;)</tw-passagedata><tw-passagedata pid="44" name="S2 CEO Convo" tags="" position="1450,1025" size="100,100">
 ### Talk to ($properNameLinkCustom: $s2CEO, &quot;short&quot;)
@@ -445,7 +445,7 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 
 “Whether or not ($properNameLink: $s2Comp) adds security cameras in the office doesn’t really matter to me—I’m never in the office, anyway. I think it’s a good idea because prototypes are being stolen and no one knows why or how.
 
-&quot;I’m a lot more uncomfortable with the idea of letting the security team see everything we’re doing on our computers. The vast majority of people at ($properNameLink: $s2Comp), including myself, aren’t doing anything malicious. We should be allowed to do work without having the security team possibly constantly looking over our shoulders.”
+&quot;I’m a lot more uncomfortable with the idea of letting the security team see everything we’re doing on our computers. The vast majority of people at ($properNameLink: $s2Comp), including myself, aren’t doing anything malicious, so if the AI flags any activity it would likely be false positives. We should be allowed to do work without having the security team possibly constantly looking over our shoulders.”
 
 (display: &quot;Done Convo&quot;)
 (set: $s2_people_consulted to it + (dataset: &quot;s2RemoteWorker&quot;))
@@ -460,7 +460,7 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 
 “Even though I usually work in the office, I like the flexibility of being able to work from home, and ($properNameLink: $s2Comp) has been very supportive—I have a few prototypes at home so that I can do that. Given the missing prototypes and leaked designs, I would completely understand if they wanted to keep all prototypes in the office. I haven’t felt that sentiment personally, but I think it’s largely because of the trust that everyone has in me, since I’ve been here for so long.
 
-&quot;I am concerned, though, about all the talk of possibly letting the security team see everything that we do on company devices. Right now, our company culture is that every team is equal, but I’m worried this would create a big power imbalance where the security team would hold a lot of power over everyone else.
+&quot;I am concerned, though, about all the talk of flagging supposedly suspicious activity and letting the security team see everything that we do on company devices. Right now, our company culture is that every team is equal, but I’m worried this would create a big power imbalance where the security team would hold a lot of power over everyone else.
 
 &quot;I’ve also heard from colleagues in other organizations, larger tech companies, where they do this so that they can catch people who leak proprietary information, and it creates a lot of paranoia and a toxic work culture. I’ve stayed with ($properNameLink: $s2Comp) this long, mostly because I’ve always had positive experiences, and I don’t want that to take a turn for the worse.”
 
@@ -490,7 +490,7 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 </tw-passagedata><tw-passagedata pid="52" name="S2 Security Convo" tags="" position="2050,1025" size="100,100">
 ### Talk to ($properNameLinkCustom: $s2Security, &quot;short&quot;)
 
-“I think ($properNameLink: $s2Comp) absolutely needs better security measures. At my previous corporate workplaces, the security teams could see anything that anyone was doing on company devices if needed, and it made it very easy to catch people when proprietary information was leaked. There’s no reason why ($properNameLink: $s2Comp) shouldn’t do the same. If someone isn’t doing anything wrong, then they shouldn’t be worried if the security team can see what they’re doing. Same with security cameras—that’s a no-brainer.”
+“I think ($properNameLink: $s2Comp) absolutely needs better security measures. At my previous corporate workplaces, the security teams could see anything that anyone was doing on company devices if needed, and it made it very easy to catch people when proprietary information was leaked. There’s no reason why ($properNameLink: $s2Comp) shouldn’t do the same. If someone isn’t doing anything wrong, then they shouldn’t be worried if the security team can see what they’re doing. Having an AI flag suspicious activity would make it even easier for us to catch anyone leaking information. Same with security cameras—that’s a no-brainer.”
 
 (display: &quot;Done Convo&quot;)
 (set: $s2_people_consulted to it + (dataset: &quot;s2Security&quot;))
@@ -534,19 +534,19 @@ Based on your recommendation, ($properNameLink: $s2Comp) doesn’t implement any
 </tw-passagedata><tw-passagedata pid="59" name="S2 Computers" tags="" position="2550,900" size="100,100">
 ### Implement Computer Surveillance
 
-($properNameLink: $s2Comp) gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. This decision is mostly unpopular amongst members of the hardware, firmware, and software departments, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
+($properNameLink: $s2Comp) gives its security team administrator privileges to be able to view employees’ activity on company computers and devices, along with an AI activity monitoring tool to alert them to potential suspicious activity. This decision is mostly unpopular amongst members of the hardware, firmware, and software departments, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
 
 [[Continue...-&gt;S2 Computers Result]]
 </tw-passagedata><tw-passagedata pid="60" name="S2 Both" tags="" position="2550,1025" size="100,100">
 ### Implement Both
 
-($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. This decision is not as well-received, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
+($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team the AI tool and administrator privileges to be able to view employees’ activity on company computers and devices. This decision is not as well-received, but most employees are hopeful that the security team can uncover the leaker and prevent further similar incidents moving forward.
 
 [[Continue...-&gt;S2 Both Result]]
 </tw-passagedata><tw-passagedata pid="61" name="S2 More" tags="" position="2550,1150" size="100,100">
 ### Implement Both
 
-($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team administrator privileges to be able to view employees’ activity on company computers and devices. Despite hesitancy from other executives, ($properNameLink: $s2CEO) announces at a company town hall that company will also be implementing a remote monitoring system to view remote workers’ workstations at home and installing productivity management software on all company computers, which will allow senior management to track how much work every team and every individual is getting done.
+($properNameLink: $s2Comp) installs security cameras in the office, a move mostly viewed as necessary amongst employees, and gives its security team the AI tool and administrator privileges to be able to view employees’ activity on company computers and devices. Despite hesitancy from other executives, ($properNameLink: $s2CEO) announces at a company town hall that ($properNameLink: $s2Comp) will also be implementing a remote monitoring system to view remote workers’ workstations at home and installing productivity management software on all company computers. This will allow senior management to track how much work every team and every individual is getting done.
 
 [[Continue...-&gt;S2 More Result]]
 </tw-passagedata><tw-passagedata pid="62" name="S2 Nothing Result" tags="" position="2700,650" size="100,100">
@@ -564,7 +564,7 @@ However, prototypes continue to go missing from the office and their designs con
 </tw-passagedata><tw-passagedata pid="64" name="S2 Computers Result" tags="" position="2700,900" size="100,100">
 ### Cold Trails
 
-However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity.
+However, after scanning through flagged employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity.
 
 [[Continue...-&gt;S2 Computers Result 2]]
 </tw-passagedata><tw-passagedata pid="65" name="S2 Computers Result 2" tags="" position="2850,900" size="100,100">
@@ -576,7 +576,7 @@ A few days before company introduces its newest sensor to the market, some of th
 </tw-passagedata><tw-passagedata pid="66" name="S2 Both Result" tags="" position="2700,1025" size="100,100">
 ### Cold Trails
 
-However, after scanning through all employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity as prototypes stop going missing and company successfully introduces its newest sensor to the market. As the security team continues not to find any evidence of security concerns, employees question why the administrator privileges were granted.
+However, after scanning through flagged employees’ emails and data, the security team finds no sign of the original leaks, leading them to believe it may have occurred from a personal device and personal email. They continue to keep a close eye on employees’ digital activity as prototypes stop going missing and ($properNameLink: $s2Comp) successfully introduces its newest sensor to the market. As the security team continues not to find any evidence of security concerns, employees question why the AI flagging tool and administrator privileges were granted.
 
 [[Move on to your next project-&gt;S3 Intro Overreach]]
 </tw-passagedata><tw-passagedata pid="67" name="S2 More Result" tags="" position="2700,1150" size="100,100">
@@ -663,6 +663,8 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 }</tw-passagedata><tw-passagedata pid="75" name="S3 Comp Desc" tags="" position="1075,1625" size="100,100">
 ### (print: $s3Comp&#39;s name)
 
+($properName: $s3Comp) is a growing software development company. It is a highly unorthodox company, as it has many policies that differ from the industry standards. Nevertheless, it grows rapidly, to everyone’s surprise, and has recently acquired a couple of companies like ($properNameLink: $s3AcquiredComp).
+
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="76" name="S3a Hub" tags="" position="1825,1500" size="100,100">
 (display: &quot;S3 Macro Setup&quot;)\
@@ -748,6 +750,8 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 </tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1625" size="100,100">
 ### (print: $s3CompRep&#39;s name)
 
+($properName: $s3CompRep) is a representative of ($properNameLink: $s3Comp). With the recent rapid expansion of ($properNameLink: $s3Comp), he is tasked with outsourcing certain tasks to other companies. He asked ($properNameLink: $consultingCompany) to help them make certain critical decisions for their company.
+
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1750" size="100,100">
 ### (print: $s3HR&#39;s name)
@@ -787,6 +791,8 @@ Based on what you heard from stakeholders, what do you tell ($properNameLink: $s
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="91" name="S3 Acquired Comp Desc" tags="" position="1075,1750" size="100,100">
 ### (print: $s3AcquiredComp&#39;s name)
+
+($properName: $s3AcquiredComp) used to be a company that dealt with cybersecurity. They have been recently acquired by ($properNameLink: $s3Comp). The original employees of ($properName: $s3AcquiredComp) are now part of the Cybersecurity team of ($properNameLink: $s3Comp).
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="92" name="S3a Nothing" tags="" position="2550,1375" size="100,100">
@@ -1005,6 +1011,8 @@ The second part of the ($properNameLink: $s3Comp) scenario is based on (link-rep
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="118" name="S3 Video Comp Desc" tags="" position="1075,2225" size="100,100">
 ### (print: $s3VideoComp&#39;s name)
+
+($properName: $s3VideoComp) is a popular video interview software designed to automate the interview process. While video interviews are still unconventional, and the hiring decision made by the software is still a mystery to most, they have seen use in several companies, particularly large ones with many applicants.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata></tw-storydata>
