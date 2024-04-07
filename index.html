@@ -632,7 +632,7 @@ You refuse to take on the project with ($properNameLink: $s3Comp) because you th
 ]))
 
 (set: $s3Comp to (dm: &quot;name&quot;, &quot;WATitWorks&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Desc&quot;))
-(set: $s3CompRep to (dm: &quot;name&quot;, &quot;Oli&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Rep Desc&quot;))
+(set: $s3CompRep to (dm: &quot;name&quot;, &quot;Cooper M. Ploy&quot;, &quot;style&quot;, (color: &quot;lightblue&quot;), &quot;desc_link&quot;, &quot;S3 Comp Rep Desc&quot;))
 
 &lt;!-- Names of people to talk to --&gt;
 (set: $s3HR to (dm: &quot;name&quot;, &quot;Hubert Mann&quot;, &quot;style&quot;, (color: &quot;violet&quot;), &quot;desc_link&quot;, &quot;S3 HR Desc&quot;, &quot;short&quot;, &quot;Hubert&quot;))
@@ -660,9 +660,38 @@ You may review the conversation with a person after consulting with them.
 * ($properNameLink: $s3NewHire), a recently hired developer at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3NewHire&quot;)[[[Review your conversation-&gt;S3a New Hire Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to her-&gt;S3a New Hire Convo]]]
 * ($properNameLink: $s3Transfer), a developer who joined ($properNameLink: $s3Comp) from a recent acquisition. (if: $s3a_people_consulted contains &quot;s3Transfer&quot;)[[[Review your conversation-&gt;S3a Transfer Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to him-&gt;S3a Transfer Convo]]]
 * ($properNameLink: $s3Developer), the developer at ($properNameLink: $s3Comp) who developed a preliminary prototype of a resume-scanning AI tool trained on developers at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3Developer&quot;)[[[Review your conversation-&gt;S3a Developer Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to him-&gt;S3a Developer Convo]]]
+* ($properNameLink: $s3CyberSec), the Vice President of Cybersecurity, a department formed from a recent acquisition at ($properNameLink: $s3Comp). (if: $s3a_people_consulted contains &quot;s3CyberSec&quot;)[[[Review your conversation-&gt;S3a Cyber Sec Convo]]] (else-if: ($s3a_can_ask:)) [[[Talk to them-&gt;S3a Cyber Sec Convo]]]
 
 [[I&#39;m ready to make a decision-&gt;S3 Decide]]
-</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1525" size="100,100"></tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="77" name="S3 Decide" tags="" position="2400,1400" size="100,100"></tw-passagedata><tw-passagedata pid="78" name="S3a HR Convo" tags="" position="1450,1525" size="100,100"></tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
+### (print: $s3CompRep&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1650" size="100,100">
+### (print: $s3HR&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1650" size="100,100">
+### (print: $s3Recruiter&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1650" size="100,100">
+### (print: $s3NewHire&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="88" name="S3 Transfer Desc" tags="" position="1900,1650" size="100,100">
+### (print: $s3Transfer&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="89" name="S3 Developer Desc" tags="" position="2050,1650" size="100,100">
+### (print: $s3Developer&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata><tw-passagedata pid="90" name="S3 Cyber Sec Desc" tags="" position="2200,1650" size="100,100">
+### (print: $s3CyberSec&#39;s name)
+
+(display: &quot;Return Button&quot;)
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
