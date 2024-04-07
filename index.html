@@ -670,18 +670,31 @@ You may review the conversation with a person after consulting with them.
 
 (display: &quot;Done Convo&quot;)
 (set: $s3a_people_consulted to it + (dataset: &quot;s3HR&quot;))
-</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100"></tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
+</tw-passagedata><tw-passagedata pid="79" name="S3a Recruiter Convo" tags="" position="1600,1525" size="100,100">
+### Talk to ($properNameLinkCustom: $s3Recruiter, &quot;short&quot;)
+
+“Anyone in HR will tell you that we’re flooded right now. We have hundreds of applications each for dozens of positions every day, and it’s simply not possible to handle all of this work without some kind of technological help. Almost all tech companies these days use Applicant Tracking System. It matches keywords from a job description with keywords in a resume, such as a list of programming languages.
+
+&quot;This is really helpful for recruiters because there’s often a bare minimum list of skill requirements for a position, yet many applicants don’t meet those requirements. ATS can help to filter out unqualified applicants, and I or another recruiter can find top candidates to interview from the rest. This is the industry standard, so I like this approach best.
+
+&quot;As much as I appreciate ($properNameLinkCustom: $s3Developer, &quot;short&quot;)’s work, I’m worried that his AI tool doesn’t quite meet the needs of a recruiter. Often, when a team is hiring, they’re not necessarily looking for someone who matches the experience of anyone else at the company in general, and sometimes they’re actually looking for someone completely different from who we’ve hired in the past. So a tool that finds top candidates based on how well they match the skills and experience of existing developers at ($properNameLink: $s3Comp) isn’t exactly what I’m looking for.”
+
+(display: &quot;Done Convo&quot;)
+(set: $s3a_people_consulted to it + (dataset: &quot;s3Recruiter&quot;))
+</tw-passagedata><tw-passagedata pid="80" name="S3a Transfer Convo" tags="" position="1900,1525" size="100,100"></tw-passagedata><tw-passagedata pid="81" name="S3a New Hire Convo" tags="" position="1750,1525" size="100,100"></tw-passagedata><tw-passagedata pid="82" name="S3a Developer Convo" tags="" position="2050,1525" size="100,100"></tw-passagedata><tw-passagedata pid="83" name="S3a Cyber Sec Convo" tags="" position="2200,1525" size="100,100"></tw-passagedata><tw-passagedata pid="84" name="S3 Comp Rep Desc" tags="" position="1225,1525" size="100,100">
 ### (print: $s3CompRep&#39;s name)
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="85" name="S3 HR Desc" tags="" position="1450,1650" size="100,100">
 ### (print: $s3HR&#39;s name)
 
-($properName: $s3HR) is the head of HR at ($properNameLink: $s3Comp).
+($properName: $s3HR) is the head of HR at ($properNameLink: $s3Comp). He has been employed by the company long before they started scaling up.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="86" name="S3 Recruiter Desc" tags="" position="1600,1650" size="100,100">
 ### (print: $s3Recruiter&#39;s name)
+
+($properName: $s3Recruiter) is a recruiter at ($properNameLink: $s3Comp). Like the rest of the HR team at ($properNameLink: $s3Comp), she has been with the company since before it started scaling up.
 
 (display: &quot;Return Button&quot;)
 </tw-passagedata><tw-passagedata pid="87" name="S3 New Hire Desc" tags="" position="1750,1650" size="100,100">
